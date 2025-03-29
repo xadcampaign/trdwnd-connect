@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -24,7 +23,7 @@ const HomePage = () => {
             <Link to="/services">Our Services</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/get-started">Contact Us</Link>
           </Button>
         </div>
       </Hero>
@@ -50,8 +49,8 @@ const HomePage = () => {
           </div>
           <div className="md:order-first">
             <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
-              alt="TRDWND team meeting" 
+              src="/lovable-uploads/142ed3dd-d67c-4553-8f3b-ea7a1aa1a479.png" 
+              alt="European Union flags on map" 
               className="rounded-lg shadow-lg w-full"
             />
           </div>
