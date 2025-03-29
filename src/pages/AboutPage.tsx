@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -12,25 +13,73 @@ const AboutPage = () => {
         height="lg:h-[70vh]"
       />
 
-      <Section title="Our Story" subtitle="Building bridges between Canadian innovation and European markets">
+      <Section title="Our Story" subtitle="Bridging the Horizon Between Canadian Innovation and European Markets">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-gray-600 mb-6 text-xl">
               Founded in 2015, TRDWND LLC emerged from the vision of Eric Dauchy and Eric Gerritsen, two international business experts who recognized the untapped potential for Canadian businesses in European markets.
             </p>
             <p className="text-gray-600 mb-6 text-xl">
-              With firsthand experience of both the challenges and opportunities that come with international expansion, our founders set out to create a company that could bridge the gap between Canadian innovation and European market access.
+              With offices in Brussels (EU) and Vancouver (Canada), our leadership team offers a unique dual-perspective approach to international business development.
             </p>
-            <p className="text-gray-600 text-xl">
-              Today, as a team of two dedicated professionals, TRDWND has grown into a premier business connector, helping dozens of Canadian companies establish successful partnerships, distribution channels, and joint ventures across the European Union.
+            <p className="text-gray-600 mb-6 text-xl">
+              The time to reduce reliance on U.S. trade and expand into Europe is now. Let's build your European success story together.
             </p>
+            <div className="mt-8 space-y-4">
+              <h3 className="text-2xl font-bold text-trdwnd-navy">Why Choose Us?</h3>
+              <ul className="space-y-3">
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Exclusive EU Network</h4>
+                    <p className="text-gray-600">Decades of experience and top-tier partnerships in key European industries.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Trade & Market Entry Support</h4>
+                    <p className="text-gray-600">Expert guidance on regulatory compliance, logistics, and market intelligence.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Risk Mitigation</h4>
+                    <p className="text-gray-600">Secure and vetted connections to prevent costly mistakes.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Custom Matchmaking</h4>
+                    <p className="text-gray-600">Tailored introductions to European buyers, suppliers, and investors.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-              alt="TRDWND story"
-              className="rounded-lg shadow-lg w-full"
-            />
+            <div className="relative rounded-lg shadow-lg overflow-hidden">
+              <img
+                src="/lovable-uploads/d689885c-f3e4-40b2-b834-e85f77743a06.png"
+                alt="Bridging the Horizon"
+                className="w-full h-auto"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-trdwnd-navy/80 to-transparent p-6">
+                <div className="text-white text-xl font-medium">
+                  Contact: <a href="mailto:eric.dauchy@theconstellationgroup.eu" className="underline hover:text-trdwnd-gold transition-colors">eric.dauchy@theconstellationgroup.eu</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
