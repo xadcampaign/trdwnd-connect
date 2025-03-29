@@ -65,10 +65,10 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Logo - Now on the right side */}
-        <Link to="/" className="flex items-center gap-2 order-first md:order-last">
-          <span className="text-[#FF0000] font-bold text-3xl">TRDWND</span>
-          <span className="text-trdwnd-gold font-light">LLC</span>
+        {/* Logo - Now on the right side and 2.5x bigger */}
+        <Link to="/" className="flex items-center gap-3 order-first md:order-last">
+          <span className="text-[#FF0000] font-bold text-7xl">TRDWND</span>
+          <span className="text-trdwnd-gold font-light text-2xl">LLC</span>
         </Link>
 
         {/* Mobile Navigation Toggle */}
