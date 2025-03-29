@@ -14,7 +14,6 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Industries", path: "/industries" },
-    { name: "Contact", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -60,8 +59,8 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg px-6 py-3">
-            Get Started
+          <Button asChild className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg px-6 py-3">
+            <Link to="/get-started">Get Started</Link>
           </Button>
         </div>
 
@@ -101,8 +100,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg py-4">
-              Get Started
+            <Button asChild className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg py-4">
+              <Link to="/get-started">Get Started</Link>
             </Button>
           </div>
         </div>

@@ -10,7 +10,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import IndustriesPage from "./pages/IndustriesPage";
-import ContactPage from "./pages/ContactPage";
+import GetStartedPage from "./pages/GetStartedPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import EUMarketAnalysisPage from "./pages/EUMarketAnalysisPage";
 import DistributionDealsPage from "./pages/DistributionDealsPage";
@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/get-started" element={<GetStartedPage />} />
           <Route path="/eu-market-analysis" element={<EUMarketAnalysisPage />} />
           <Route path="/distribution-deals" element={<DistributionDealsPage />} />
           <Route path="/tech-licensing" element={<TechLicensingPage />} />
