@@ -219,8 +219,8 @@ const ServicesPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Distribution Deals"
+              src="/lovable-uploads/4a4d0292-880e-4a42-80aa-4b66a781fdc0.png"
+              alt="Distribution Deals in Europe"
               className="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -330,7 +330,7 @@ const ServicesPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="/lovable-uploads/a7201968-6e87-4ad2-afe9-1217fb1720ce.png"
               alt="Joint Ventures"
               className="rounded-lg shadow-lg w-full"
             />
