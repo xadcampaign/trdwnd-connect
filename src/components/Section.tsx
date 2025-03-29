@@ -34,7 +34,7 @@ const Section = ({
           <div className="text-center mb-16">
             {title && (
               <h2
-                className={`text-3xl md:text-4xl font-bold mb-4 ${
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${
                   bg === "dark" ? "text-white" : "gradient-heading"
                 }`}
               >
@@ -43,7 +43,7 @@ const Section = ({
             )}
             {subtitle && (
               <p
-                className={`text-lg md:text-xl max-w-3xl mx-auto ${
+                className={`text-xl md:text-2xl max-w-3xl mx-auto ${
                   bg === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >

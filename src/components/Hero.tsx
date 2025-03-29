@@ -36,7 +36,7 @@ const Hero = ({
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
             {title}
           </h1>
           {subtitle && (

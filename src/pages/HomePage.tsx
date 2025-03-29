@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -168,8 +169,8 @@ const HomePage = () => {
         className="py-20 md:py-28"
       >
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Expand Your Business into Europe?</h2>
-          <p className="text-gray-300 text-lg mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Expand Your Business into Europe?</h2>
+          <p className="text-gray-300 text-xl mb-8">
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
