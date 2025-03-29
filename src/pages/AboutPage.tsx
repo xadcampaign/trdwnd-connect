@@ -16,14 +16,14 @@ const AboutPage = () => {
       <Section title="Our Story" subtitle="Building bridges between Canadian innovation and European markets">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-gray-600 mb-6">
-              Founded in 2015, TRDWND LLC emerged from the vision of two international business experts who recognized the untapped potential for Canadian businesses in European markets.
+            <p className="text-gray-600 mb-6 text-xl">
+              Founded in 2015, TRDWND LLC emerged from the vision of Eric Dauchy and Eric Gerritsen, two international business experts who recognized the untapped potential for Canadian businesses in European markets.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-xl">
               With firsthand experience of both the challenges and opportunities that come with international expansion, our founders set out to create a company that could bridge the gap between Canadian innovation and European market access.
             </p>
-            <p className="text-gray-600">
-              Today, TRDWND has grown into a premier business connector, helping dozens of Canadian companies establish successful partnerships, distribution channels, and joint ventures across the European Union.
+            <p className="text-gray-600 text-xl">
+              Today, as a team of two dedicated professionals, TRDWND has grown into a premier business connector, helping dozens of Canadian companies establish successful partnerships, distribution channels, and joint ventures across the European Union.
             </p>
           </div>
           <div>
@@ -40,7 +40,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-trdwnd-navy mb-4">Our Mission</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-lg">
               To empower Canadian businesses to successfully enter and thrive in European markets by providing strategic connections, market insights, and partnership opportunities that drive sustainable international growth.
             </p>
             <div className="border-l-4 border-trdwnd-gold pl-4 italic text-gray-600">
@@ -84,7 +84,7 @@ const AboutPage = () => {
         </div>
       </Section>
 
-      <Section title="Our Leadership Team">
+      <Section title="Our Team" subtitle="Meet the founders driving TRDWND's mission">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {

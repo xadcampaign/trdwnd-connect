@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -34,16 +35,16 @@ const HomePage = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-2xl font-medium leading-relaxed">
               With decades of combined experience in international business development, our team specializes in creating valuable connections that lead to successful market entries, distribution deals, and strategic alliances.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-2xl font-medium leading-relaxed">
               We understand the unique challenges Canadian businesses face when expanding into European markets, and we provide tailored solutions to overcome these barriers.
             </p>
             <div className="flex items-center mt-8">
-              <Link to="/about" className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center group">
-                Learn more about our approach
-                <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <Link to="/about" className="text-trdwnd-navy hover:text-trdwnd-darkblue font-bold text-xl inline-flex items-center group">
+                About Us
+                <ChevronRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
