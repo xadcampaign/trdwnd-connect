@@ -11,7 +11,7 @@ const IndustriesPage = () => {
       id: "tech",
       name: "High-Tech & AI",
       description: "Canada's high-tech sector is increasingly looking to Europe for growth opportunities. We connect innovative Canadian technology companies with European implementation partners, customers, and research institutions.",
-      image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       services: [
         "Market entry strategy for software and SaaS products",
         "AI technology licensing and partnerships",
@@ -27,7 +27,7 @@ const IndustriesPage = () => {
       id: "aerospace",
       name: "Aerospace & Defense",
       description: "The European aerospace and defense market presents significant opportunities for Canadian companies in this sector. We facilitate partnerships that meet strict regulatory requirements and security standards.",
-      image: "https://images.unsplash.com/photo-1532368432602-98003930fe1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
       services: [
         "Strategic alliances with European defense contractors",
         "Supply chain integration for aerospace components",

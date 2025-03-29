@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -121,7 +120,7 @@ const HomePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative overflow-hidden group rounded-lg shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
               alt="High-Tech & AI" 
               className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -140,7 +139,7 @@ const HomePage = () => {
           
           <div className="relative overflow-hidden group rounded-lg shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1532368432602-98003930fe1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
               alt="Aerospace & Defense" 
               className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
