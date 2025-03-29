@@ -33,15 +33,6 @@ const Hero = ({
         <div className="absolute inset-0 bg-trdwnd-navy/70 hero-pattern"></div>
       )}
 
-      {/* Canada/EU Flag Corner Decoration */}
-      <div className="absolute top-20 right-8 z-20">
-        <img 
-          src="/lovable-uploads/2c80b797-3521-4700-92e9-711c22bdf138.png" 
-          alt="Canada-EU Partnership" 
-          className="w-24 h-auto rounded shadow-lg"
-        />
-      </div>
-
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl text-center md:text-left">
