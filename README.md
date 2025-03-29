@@ -1,4 +1,5 @@
-# Welcome to your Lovable project
+
+# TRDWND LLC - Canadian Export Solutions to EU Markets
 
 ## Project info
 
@@ -52,13 +53,15 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+- React Router
+- React Query
 
 ## How can I deploy this project?
 
