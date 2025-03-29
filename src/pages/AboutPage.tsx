@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -9,12 +8,12 @@ const AboutPage = () => {
       <Hero
         title="About TRDWND LLC"
         subtitle="Your trusted partner for expanding into European markets"
-        image="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+        image="/lovable-uploads/01b447e6-649d-4a6d-b1fa-0abac25589bb.png"
         height="lg:h-[70vh]"
       />
 
-      <Section title="Our Story" subtitle="Bridging the Horizon Between Canadian Innovation and European Markets">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <Section title="Why Choose Us" subtitle="Bridging the Horizon Between Canadian Innovation and European Markets">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
           <div>
             <p className="text-gray-600 mb-6 text-xl">
               Founded in 2015, TRDWND LLC emerged from the vision of Eric Dauchy and Eric Gerritsen, two international business experts who recognized the untapped potential for Canadian businesses in European markets.
@@ -65,20 +64,6 @@ const AboutPage = () => {
                   </div>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div>
-            <div className="relative rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="/lovable-uploads/d689885c-f3e4-40b2-b834-e85f77743a06.png"
-                alt="Bridging the Horizon"
-                className="w-full h-auto"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-trdwnd-navy/80 to-transparent p-6">
-                <div className="text-white text-xl font-medium">
-                  Contact: <a href="mailto:eric.dauchy@theconstellationgroup.eu" className="underline hover:text-trdwnd-gold transition-colors">eric.dauchy@theconstellationgroup.eu</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
