@@ -45,12 +45,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-[#FF0000] font-bold text-3xl">TRDWND</span>
-          <span className="text-trdwnd-gold font-light">LLC</span>
-        </Link>
-
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Now on the left side */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -69,6 +64,12 @@ const Navbar = () => {
             Get Started
           </Button>
         </div>
+
+        {/* Logo - Now on the right side */}
+        <Link to="/" className="flex items-center gap-2 order-first md:order-last">
+          <span className="text-[#FF0000] font-bold text-3xl">TRDWND</span>
+          <span className="text-trdwnd-gold font-light">LLC</span>
+        </Link>
 
         {/* Mobile Navigation Toggle */}
         <button
