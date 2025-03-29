@@ -29,19 +29,16 @@ const Section = ({
       id={id}
       className={`py-16 md:py-24 ${bgClasses[bg]} ${className} relative`}
     >
-      {/* Canada/EU Logo Corner Decoration */}
-      <div className="absolute top-4 right-4 flex gap-2 opacity-60">
-        <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold">
-          CA
+      {/* Only show the Canada/EU flag for white and light backgrounds, not dark */}
+      {bg !== "dark" && (
+        <div className="absolute top-4 right-4 opacity-70">
+          <img 
+            src="/lovable-uploads/2c80b797-3521-4700-92e9-711c22bdf138.png" 
+            alt="Canada-EU Partnership" 
+            className="w-16 h-auto rounded shadow-sm"
+          />
         </div>
-        <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
-          <div className="flex items-center justify-center w-full h-full">
-            <div className="text-yellow-300 text-xs">
-              ★★★★★
-            </div>
-          </div>
-        </div>
-      </div>
+      )}
       
       <div className="container mx-auto px-4">
         {(title || subtitle) && (
