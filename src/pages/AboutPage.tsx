@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -86,36 +85,33 @@ const AboutPage = () => {
 
       <Section title="Our Team" subtitle="Meet the founders driving TRDWND's mission">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {[
-            {
-              name: "Eric Dauchy",
-              title: "Co-Founder & CEO",
-              bio: "With over 20 years of experience in international business development, Eric has helped numerous Canadian businesses establish a presence in European markets. His expertise in strategic partnerships and market entry strategies has been instrumental in TRDWND's success.",
-              image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              linkedin: "https://linkedin.com"
-            },
-            {
-              name: "Eric Gerritsen",
-              title: "Co-Founder & COO",
-              bio: "Eric brings extensive knowledge of European business practices and regulatory environments. His network of contacts across the EU has opened doors for countless Canadian companies looking to expand internationally.",
-              image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
-              linkedin: "https://linkedin.com"
-            }
-          ].map((leader, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
-              <div className="md:w-2/5 h-80 md:h-auto">
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="w-full h-full object-cover"
-                />
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-trdwnd-navy mb-2">Eric Dauchy</h3>
+              <p className="text-trdwnd-gold font-medium mb-4">Co-Founder & CEO</p>
+              <div className="space-y-4 text-gray-600">
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Founder and CEO of The Constellation Group (1998) - pan-European Business Development agency with partners in 27 EU members states, UK, Norway, Switzerland.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Responsibility for leading TCG high-tech and aerospace/defense customers Business Development Programs in Europe.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Served in leadership assignments in supply chain management, strategy, sales, program management, operations and communications.</p>
+                </div>
               </div>
-              <div className="md:w-3/5 p-6 flex flex-col">
-                <h3 className="text-2xl font-bold text-trdwnd-navy">{leader.name}</h3>
-                <p className="text-trdwnd-gold font-medium mb-4">{leader.title}</p>
-                <p className="text-gray-600 mb-6 flex-grow">{leader.bio}</p>
+              <div className="mt-6">
                 <a
-                  href={leader.linkedin}
+                  href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
@@ -125,7 +121,53 @@ const AboutPage = () => {
                 </a>
               </div>
             </div>
-          ))}
+            <div className="mt-auto">
+              <img 
+                src="/lovable-uploads/8e0b7229-b916-442c-83b2-884b8c9062f1.png" 
+                alt="Eric Dauchy" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-trdwnd-navy mb-2">Eric Gerritsen</h3>
+              <p className="text-trdwnd-gold font-medium mb-4">Co-Founder & COO</p>
+              <div className="space-y-4 text-gray-600">
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Oversees Canada Operations, Communications, Business Development & Strategy, and Enterprise Business programs.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Former SVP Global Alliances Terra Lycos, branching out as VC; co-founder/CEO of various N American startups.</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
+                >
+                  Connect on LinkedIn
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            </div>
+            <div className="mt-auto">
+              <img 
+                src="/lovable-uploads/8e0b7229-b916-442c-83b2-884b8c9062f1.png" 
+                alt="Eric Gerritsen" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </Section>
 
