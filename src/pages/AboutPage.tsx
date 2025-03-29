@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -123,7 +124,7 @@ const AboutPage = () => {
             </div>
             <div className="mt-auto">
               <img 
-                src="/lovable-uploads/8e0b7229-b916-442c-83b2-884b8c9062f1.png" 
+                src="/lovable-uploads/80909d8f-6f03-46f7-a4dc-702d151474b4.png" 
                 alt="Eric Dauchy" 
                 className="w-full h-auto"
               />
