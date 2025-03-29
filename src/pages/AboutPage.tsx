@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -219,8 +220,8 @@ const AboutPage = () => {
             <p className="text-white">Successful EU Partnerships</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-trdwnd-gold mb-2">12</div>
-            <p className="text-white">EU Countries Covered</p>
+            <div className="text-4xl font-bold text-trdwnd-gold mb-2">27+</div>
+            <p className="text-white">EU + UK, Norway & Switzerland</p>
           </div>
         </div>
       </Section>
