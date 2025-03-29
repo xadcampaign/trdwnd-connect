@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -17,7 +16,7 @@ const HomePage = () => {
       <Hero
         title="Expanding Canadian Export Markets Through Elite EU Partnerships"
         subtitle="We connect Canadian companies with high-quality partners in the European Union to maximize market potential and drive international growth."
-        image="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+        image="/lovable-uploads/192ae08f-974b-4254-a059-f245c321a59a.png"
       >
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
           <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
