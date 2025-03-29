@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -496,7 +495,7 @@ const ServicesPage = () => {
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
               <Link to="/contact">Start Your EU Journey</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+            <Button asChild variant="outline" size="lg" textStyle="bold" className="border-white text-white hover:bg-white/10">
               <Link to="/industries">Explore Industries</Link>
             </Button>
           </div>
