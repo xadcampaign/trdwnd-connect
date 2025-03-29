@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`hover-underline text-sm font-medium transition-colors ${
+              className={`hover-underline text-lg font-medium transition-colors ${
                 location.pathname === link.path
                   ? "text-trdwnd-navy"
                   : "text-gray-600 hover:text-trdwnd-navy"
@@ -60,7 +60,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white">
+          <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg px-6 py-3">
             Get Started
           </Button>
         </div>
@@ -77,9 +77,9 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-trdwnd-navy" />
+            <X className="h-8 w-8 text-trdwnd-navy" />
           ) : (
-            <Menu className="h-6 w-6 text-trdwnd-navy" />
+            <Menu className="h-8 w-8 text-trdwnd-navy" />
           )}
         </button>
       </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`py-2 px-4 rounded-md transition-colors ${
+                className={`py-3 px-4 text-lg rounded-md transition-colors ${
                   location.pathname === link.path
                     ? "bg-trdwnd-lightblue text-trdwnd-navy font-medium"
                     : "text-gray-600 hover:bg-gray-50"
@@ -101,7 +101,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white">
+            <Button className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg py-4">
               Get Started
             </Button>
           </div>
