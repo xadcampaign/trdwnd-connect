@@ -495,15 +495,18 @@ const ServicesPage = () => {
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
               <Link to="/contact">Start Your EU Journey</Link>
             </Button>
-            <Button 
-              asChild 
-              variant="static" 
-              size="lg" 
-              textStyle="bold" 
-              className="border-white text-white"
-            >
-              <Link to="/industries">Explore Industries</Link>
-            </Button>
+            <div className="flex flex-col items-center">
+              <p className="text-white font-semibold mb-2">Explore Industries</p>
+              <Button 
+                asChild 
+                variant="static" 
+                size="lg" 
+                textStyle="bold" 
+                className="border-white text-white"
+              >
+                <Link to="/industries">Explore Industries</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </Section>
