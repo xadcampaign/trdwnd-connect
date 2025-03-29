@@ -90,7 +90,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/services#market-analysis"
+                  to="/eu-market-analysis"
                   className="text-gray-300 hover:text-trdwnd-gold transition-colors"
                 >
                   EU Market Analysis
@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services#distribution"
+                  to="/distribution-deals"
                   className="text-gray-300 hover:text-trdwnd-gold transition-colors"
                 >
                   Distribution Deals
@@ -106,7 +106,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services#licensing"
+                  to="/tech-licensing"
                   className="text-gray-300 hover:text-trdwnd-gold transition-colors"
                 >
                   Tech Licensing
@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services#joint-ventures"
+                  to="/joint-ventures"
                   className="text-gray-300 hover:text-trdwnd-gold transition-colors"
                 >
                   Joint Ventures

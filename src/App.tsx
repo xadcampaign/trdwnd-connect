@@ -12,6 +12,10 @@ import ServicesPage from "./pages/ServicesPage";
 import IndustriesPage from "./pages/IndustriesPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import EUMarketAnalysisPage from "./pages/EUMarketAnalysisPage";
+import DistributionDealsPage from "./pages/DistributionDealsPage";
+import TechLicensingPage from "./pages/TechLicensingPage";
+import JointVenturesPage from "./pages/JointVenturesPage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/eu-market-analysis" element={<EUMarketAnalysisPage />} />
+          <Route path="/distribution-deals" element={<DistributionDealsPage />} />
+          <Route path="/tech-licensing" element={<TechLicensingPage />} />
+          <Route path="/joint-ventures" element={<JointVenturesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
