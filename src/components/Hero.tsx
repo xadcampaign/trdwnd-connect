@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface HeroProps {
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   image: string;
   overlay?: boolean;
   children?: ReactNode;
