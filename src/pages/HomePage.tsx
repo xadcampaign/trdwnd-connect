@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -139,7 +140,7 @@ const HomePage = () => {
           
           <div className="relative overflow-hidden group rounded-lg shadow-lg">
             <img 
-              src="/lovable-uploads/1a9c0d1b-f8d3-4b1a-a72d-8d15e3e9765d.png" 
+              src="/lovable-uploads/bb13e67d-0e28-40c8-956a-956eb2d39cf1.png" 
               alt="Aerospace & Defense" 
               className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
