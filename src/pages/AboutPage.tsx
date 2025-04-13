@@ -185,7 +185,7 @@ const AboutPage = () => {
               </div>
               <div className="mt-6">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/eric-j-gerritsen-6b9117/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
@@ -197,7 +197,7 @@ const AboutPage = () => {
             </div>
             <div className="mt-auto">
               <img 
-                src="/lovable-uploads/09aed651-6a4c-4d99-8e45-c5162d0e1fc0.png" 
+                src="/lovable-uploads/00b16b7e-c499-4724-b5ba-f0d5564f8ce1.png" 
                 alt="Eric Gerritsen" 
                 className="w-full h-auto"
               />
