@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -119,8 +120,12 @@ const ServicesPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Card className="border-t-4 border-t-trdwnd-navy shadow-md hover:shadow-lg transition-shadow">
             <CardHeader>
-              <div className="mb-2">
-                <Cpu className="h-8 w-8 text-trdwnd-navy" />
+              <div className="mb-2 h-16 w-16 overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/bc508de7-3e85-4996-8066-ee9b847a0048.png" 
+                  alt="AI Technology"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <CardTitle className="text-2xl">High-Tech & AI</CardTitle>
               <CardDescription>Cutting-edge technology solutions</CardDescription>
@@ -141,8 +146,12 @@ const ServicesPage = () => {
 
           <Card className="border-t-4 border-t-trdwnd-navy shadow-md hover:shadow-lg transition-shadow">
             <CardHeader>
-              <div className="mb-2">
-                <Plane className="h-8 w-8 text-trdwnd-navy" />
+              <div className="mb-2 h-16 w-16 overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/2cffff28-4aa4-4755-b328-4dc77aa66515.png" 
+                  alt="Aerospace & Defense"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <CardTitle className="text-2xl">Aerospace & Defense</CardTitle>
               <CardDescription>Strategic defense partnerships</CardDescription>
