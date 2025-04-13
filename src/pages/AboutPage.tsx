@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -145,7 +146,7 @@ const AboutPage = () => {
               </div>
               <div className="mt-6">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/ericdauchy/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
@@ -157,7 +158,7 @@ const AboutPage = () => {
             </div>
             <div className="mt-auto">
               <img 
-                src="/lovable-uploads/80909d8f-6f03-46f7-a4dc-702d151474b4.png" 
+                src="/lovable-uploads/21e2fefa-5229-43b8-9fe9-3c76cac4a51e.png" 
                 alt="Eric Dauchy" 
                 className="w-full h-auto"
               />
