@@ -128,12 +128,8 @@ const IndustriesPage = () => {
             <div className="p-1 bg-gradient-to-r from-trdwnd-navy to-blue-500"></div>
             <div className="p-8">
               <div className="flex items-center mb-6">
-                <div className="bg-trdwnd-lightblue p-3 rounded-lg mr-4 overflow-hidden h-16 w-16 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/bc508de7-3e85-4996-8066-ee9b847a0048.png" 
-                    alt="AI Technology"
-                    className="h-full w-full object-cover"
-                  />
+                <div className="bg-trdwnd-lightblue p-3 rounded-lg mr-4">
+                  <Cpu className="h-8 w-8 text-trdwnd-navy" />
                 </div>
                 <h3 className="text-2xl font-bold text-trdwnd-navy">High-Tech & AI</h3>
               </div>
@@ -171,12 +167,8 @@ const IndustriesPage = () => {
             <div className="p-1 bg-gradient-to-r from-trdwnd-navy to-blue-500"></div>
             <div className="p-8">
               <div className="flex items-center mb-6">
-                <div className="bg-trdwnd-lightblue p-3 rounded-lg mr-4 overflow-hidden h-16 w-16 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/2cffff28-4aa4-4755-b328-4dc77aa66515.png" 
-                    alt="Aerospace & Defense"
-                    className="h-full w-full object-cover"
-                  />
+                <div className="bg-trdwnd-lightblue p-3 rounded-lg mr-4">
+                  <Plane className="h-8 w-8 text-trdwnd-navy" />
                 </div>
                 <h3 className="text-2xl font-bold text-trdwnd-navy">Aerospace & Defense</h3>
               </div>
@@ -700,6 +692,7 @@ const IndustriesPage = () => {
 
 export default IndustriesPage;
 
+// Mock component to fix error - would be removed in a real implementation
 const Clock = ({ className }: { className: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
