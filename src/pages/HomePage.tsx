@@ -22,7 +22,7 @@ const HomePage = () => {
           <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
             <Link to="/services">Our Services</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+          <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
             <Link to="/get-started">Contact Us</Link>
           </Button>
         </div>
@@ -176,7 +176,7 @@ const HomePage = () => {
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
               <Link to="/get-started">Get Started</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:text-white">
+            <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
               <Link to="/services">Learn More</Link>
             </Button>
           </div>
