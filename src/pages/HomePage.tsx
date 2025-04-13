@@ -16,7 +16,7 @@ const HomePage = () => {
     <main>
       <Hero
         title="Expanding Canadian Export Markets Through Elite EU Partnerships"
-        subtitle="We connect Canadian companies with high-quality partners in the European Union to maximize market potential and drive international growth."
+        subtitle={<span>We connect <span className="text-[#ea384c]">Canadian companies</span> with high-quality partners in the European Union to maximize market potential and drive international growth.</span>}
         image="/lovable-uploads/192ae08f-974b-4254-a059-f245c321a59a.png"
       >
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
