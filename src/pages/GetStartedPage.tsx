@@ -54,7 +54,7 @@ const GetStartedPage = () => {
     <main>
       <Hero
         title="Get Started"
-        subtitle="Begin your journey to expand into European markets with TRDWND's expert guidance"
+        subtitle="Begin your journey to expand into European markets with EUROGROWTH's expert guidance"
         image="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         height="lg:h-[60vh]"
       />
@@ -150,8 +150,18 @@ const GetStartedPage = () => {
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:contact@trdwnd.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      contact@trdwnd.com
+                    <a href="mailto:Eric.Dauchy@EuroGrowth.eu" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Eric.Dauchy@EuroGrowth.eu
+                    </a>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Email</p>
+                    <a href="mailto:Eric.Gerritsen@EuroGrowth.eu" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Eric.Gerritsen@EuroGrowth.eu
                     </a>
                   </div>
                 </li>
@@ -169,11 +179,9 @@ const GetStartedPage = () => {
                 <li className="flex items-start">
                   <MapPin className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-medium">Office</p>
+                    <p className="font-medium">Offices</p>
                     <address className="text-gray-300 not-italic">
-                      123 Business Ave<br />
-                      Toronto, ON M5V 2B7<br />
-                      Canada
+                      Offices in Toronto, Vancouver, Brussels and London
                     </address>
                   </div>
                 </li>
@@ -198,9 +206,7 @@ const GetStartedPage = () => {
                   <MapPin className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <address className="text-gray-600 not-italic">
-                      Prinsenstraat 45<br />
-                      1015 DB Amsterdam<br />
-                      The Netherlands
+                      Offices in Brussels and London
                     </address>
                   </div>
                 </li>

@@ -128,7 +128,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
-                <span className="text-gray-300">contact@eurogrowth.com</span>
+                <span className="text-gray-300">Eric.Dauchy@EuroGrowth.eu</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
+                <span className="text-gray-300">Eric.Gerritsen@EuroGrowth.eu</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
@@ -137,7 +141,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <span className="text-gray-300">
-                  123 Business Ave, Toronto, ON, Canada
+                  Offices in Toronto, Vancouver, Brussels and London
                 </span>
               </li>
             </ul>
