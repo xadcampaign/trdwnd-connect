@@ -239,8 +239,8 @@ const IndustriesPage = () => {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
-              alt="Defense and aerospace technology" 
+              src="/lovable-uploads/d2c017e4-584b-4175-b890-769544daff6a.png" 
+              alt="Defense and aerospace technology drone" 
               className="rounded-lg shadow-lg"
             />
           </div>
