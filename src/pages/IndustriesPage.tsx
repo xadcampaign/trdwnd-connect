@@ -360,9 +360,9 @@ const IndustriesPage = () => {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                src="/lovable-uploads/59509fef-cf6c-4679-9dea-230290168db0.png" 
                 alt="Technology and innovation" 
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </div>
           </div>
