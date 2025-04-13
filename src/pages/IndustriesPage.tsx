@@ -204,7 +204,7 @@ const IndustriesPage = () => {
         </div>
       </Section>
 
-      <Section bg="light" id="dual-use">
+      <Section id="dual-use">
         <h2 className="text-3xl font-bold text-trdwnd-navy mb-8 text-center">Dual Use Growth: Top of Mind in Europe</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -678,7 +678,7 @@ const IndustriesPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
-              <Link to="/contact">Start Your EU Journey</Link>
+              <Link to="/get-started">Start Your EU Journey</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
               <Link to="/services">View Our Services</Link>

@@ -69,25 +69,25 @@ const HomePage = () => {
               icon: <Globe className="h-10 w-10 text-trdwnd-navy" />,
               title: "EU Market Analysis",
               description: "In-depth research and analysis of European markets to identify opportunities and entry strategies.",
-              link: "/services#market-analysis"
+              link: "/eu-market-analysis"
             },
             {
               icon: <Handshake className="h-10 w-10 text-trdwnd-navy" />,
               title: "Distribution Deals",
               description: "Connect with established distributors to get your products into European retail networks.",
-              link: "/services#distribution"
+              link: "/distribution-deals"
             },
             {
               icon: <TrendingUp className="h-10 w-10 text-trdwnd-navy" />,
               title: "Tech Licensing",
               description: "Navigate complex licensing agreements to monetize your technology across European markets.",
-              link: "/services#licensing"
+              link: "/tech-licensing"
             },
             {
               icon: <Users className="h-10 w-10 text-trdwnd-navy" />,
               title: "Joint Ventures",
               description: "Form strategic partnerships with European businesses to share resources and market knowledge.",
-              link: "/services#joint-ventures"
+              link: "/joint-ventures"
             }
           ].map((service, index) => (
             <div 
@@ -175,7 +175,7 @@ const HomePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
-              <Link to="/contact">Get Started</Link>
+              <Link to="/get-started">Get Started</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
               <Link to="/services">Learn More</Link>
