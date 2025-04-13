@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
-              <span>TRDWND</span>
+              <span>EUROGROWTH</span>
               <span className="text-trdwnd-gold font-light ml-1">LLC</span>
             </h3>
             <p className="text-gray-300 mb-4">
@@ -128,7 +128,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
-                <span className="text-gray-300">contact@trdwnd.com</span>
+                <span className="text-gray-300">contact@eurogrowth.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} TRDWND LLC. All rights reserved.
+              &copy; {currentYear} EUROGROWTH LLC. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link

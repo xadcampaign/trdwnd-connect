@@ -31,7 +31,7 @@ const HomePage = () => {
 
       <Section 
         title="Who We Are" 
-        subtitle="TRDWND LLC is a premier connector for Canadian companies seeking to expand their market reach through strategic partnerships in the European Union."
+        subtitle="EUROGROWTH LLC is a premier connector for Canadian companies seeking to expand their market reach through strategic partnerships in the European Union."
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
