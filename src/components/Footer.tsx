@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,22 +18,24 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ericdauchy/"
                 className="text-gray-300 hover:text-trdwnd-gold transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Eric Dauchy LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin size={20} />
+                <span className="sr-only">Eric Dauchy LinkedIn Profile</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/eric-j-gerritsen-6b9117/"
                 className="text-gray-300 hover:text-trdwnd-gold transition-colors"
-                aria-label="Twitter"
+                aria-label="Eric Gerritsen LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter size={20} />
+                <Linkedin size={20} />
+                <span className="sr-only">Eric Gerritsen LinkedIn Profile</span>
               </a>
             </div>
           </div>
