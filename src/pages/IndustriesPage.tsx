@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -642,13 +641,13 @@ const IndustriesPage = () => {
 
       <Section bg="dark" className="py-20 md:py-28">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Why Choose TRDWND?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Why Choose EUROGROWTH?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {[
               {
                 icon: <Globe className="h-6 w-6 text-trdwnd-gold" />,
-                title: "Exclusive EU Network",
+                title: "Extensive EU Network",
                 description: "Decades of experience and top-tier partnerships in key European industries"
               },
               {

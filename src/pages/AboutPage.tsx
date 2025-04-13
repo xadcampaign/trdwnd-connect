@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { ExternalLink } from "lucide-react";
@@ -7,7 +6,7 @@ const AboutPage = () => {
   return (
     <main>
       <Hero
-        title="About TRDWND LLC"
+        title="About EUROGROWTH LLC"
         subtitle="Your trusted partner for expanding into European markets"
         image="/lovable-uploads/01b447e6-649d-4a6d-b1fa-0abac25589bb.png"
         height="lg:h-[70vh]"
@@ -17,7 +16,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
           <div>
             <p className="text-gray-600 mb-6 text-xl">
-              Founded in 2015, TRDWND LLC emerged from the vision of Eric Dauchy and Eric Gerritsen, two international business experts who recognized the untapped potential for Canadian businesses in European markets.
+              Founded in 2015, EUROGROWTH LLC emerged from the vision of Eric Dauchy and Eric Gerritsen, two international business experts who recognized the untapped potential for Canadian businesses in European markets.
             </p>
             <p className="text-gray-600 mb-6 text-xl">
               With offices in Brussels (EU) and Vancouver (Canada), our leadership team offers a unique dual-perspective approach to international business development.
@@ -33,7 +32,7 @@ const AboutPage = () => {
                     <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-trdwnd-navy">Exclusive EU Network</h4>
+                    <h4 className="font-semibold text-trdwnd-navy">Extensive EU Network</h4>
                     <p className="text-gray-600">Decades of experience and top-tier partnerships in key European industries.</p>
                   </div>
                 </li>
@@ -118,7 +117,7 @@ const AboutPage = () => {
         </div>
       </Section>
 
-      <Section title="Our Team" subtitle="Meet the founders driving TRDWND's mission">
+      <Section title="Our Team" subtitle="Meet the founders driving EUROGROWTH's mission">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
             <div className="p-6">
