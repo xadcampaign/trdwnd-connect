@@ -658,7 +658,7 @@ const IndustriesPage = () => {
               {
                 icon: <Shield className="h-6 w-6 text-trdwnd-gold" />,
                 title: "Risk Mitigation",
-                description: "Secure and vetted connections to prevent costly mistakes"
+                description: "Secure and curated connections to prevent costly mistakes"
               },
               {
                 icon: <Users className="h-6 w-6 text-trdwnd-gold" />,
@@ -692,7 +692,6 @@ const IndustriesPage = () => {
 
 export default IndustriesPage;
 
-// Mock component to fix error - would be removed in a real implementation
 const Clock = ({ className }: { className: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

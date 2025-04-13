@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -37,7 +36,7 @@ const DistributionDealsPage = () => {
             </p>
             <ul className="space-y-4 mb-8">
               {[
-                "Access to pre-vetted distribution partners across EU markets",
+                "Access to pre-curated distribution partners across EU markets",
                 "Personal introductions to decision-makers in your target sectors",
                 "Cultural and business practice guidance for successful negotiations",
                 "Ongoing relationship management support",
