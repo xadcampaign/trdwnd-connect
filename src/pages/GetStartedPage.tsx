@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -27,38 +26,33 @@ const GetStartedPage = () => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Prepare the email data
-    const emailData = {
-      to: "Eric.Dauchy@EuroGrowth.ca",
-      subject: `New contact form submission from ${formState.name}`,
-      message: `
-        Name: ${formState.name}
-        Email: ${formState.email}
-        Company: ${formState.company}
-        Phone: ${formState.phone}
-        
-        Message:
-        ${formState.message}
-      `,
-    };
-    
-    // Send email using a mailto link
-    const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.message)}`;
-    
-    // Open the default email client
-    window.open(mailtoLink, '_blank');
-    
-    // Show success toast and reset form
-    setTimeout(() => {
+    try {
+      // Send to the Supabase Edge Function
+      const response = await fetch(`${window.location.origin}/functions/v1/send-contact-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
+      
+      // Show success message
       toast({
         title: "Message Sent",
         description: "Thank you for contacting us. We'll respond shortly.",
       });
       
+      // Reset form
       setFormState({
         name: "",
         email: "",
@@ -67,8 +61,16 @@ const GetStartedPage = () => {
         message: "",
       });
       
+    } catch (error) {
+      console.error("Error sending form:", error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
