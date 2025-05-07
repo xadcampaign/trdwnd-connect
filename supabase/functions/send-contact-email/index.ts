@@ -9,6 +9,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY") || "re_2k6adp5u_Pvh9sJv
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Content-Type": "application/json" // Ensure Content-Type is set for all responses
 };
 
 // Define expected request body type
@@ -40,7 +41,7 @@ const handler = async (req: Request): Promise<Response> => {
         JSON.stringify({ error: "Invalid request body format" }),
         { 
           status: 400, 
-          headers: { "Content-Type": "application/json", ...corsHeaders } 
+          headers: corsHeaders 
         }
       );
     }
@@ -51,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
         JSON.stringify({ error: "Missing required fields" }),
         { 
           status: 400, 
-          headers: { "Content-Type": "application/json", ...corsHeaders } 
+          headers: corsHeaders 
         }
       );
     }
@@ -67,30 +68,50 @@ const handler = async (req: Request): Promise<Response> => {
       <p>${formData.message.replace(/\n/g, '<br>')}</p>
     `;
 
-    // Send email using Resend
-    const emailResponse = await resend.emails.send({
-      from: "EuroGrowth Contact Form <onboarding@resend.dev>",
-      to: "eric.dauchy@eurogrowth.ca",
-      subject: `New contact form submission from ${formData.name}`,
-      html: emailContent,
-      reply_to: formData.email,
-    });
+    try {
+      // Send email using Resend
+      const emailResponse = await resend.emails.send({
+        from: "EuroGrowth Contact Form <onboarding@resend.dev>",
+        to: "eric.dauchy@eurogrowth.ca",
+        subject: `New contact form submission from ${formData.name}`,
+        html: emailContent,
+        reply_to: formData.email,
+      });
 
-    console.log("Email sent successfully:", emailResponse);
+      console.log("Email sent successfully:", emailResponse);
 
-    return new Response(JSON.stringify({ success: true, id: emailResponse.id }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
-    });
+      return new Response(
+        JSON.stringify({ success: true, id: emailResponse.id }), 
+        {
+          status: 200,
+          headers: corsHeaders
+        }
+      );
+    } catch (emailError: any) {
+      console.error("Error from email service:", emailError);
+      return new Response(
+        JSON.stringify({ 
+          error: "Failed to send email", 
+          details: emailError.message 
+        }),
+        { 
+          status: 500, 
+          headers: corsHeaders 
+        }
+      );
+    }
     
-  } catch (error) {
-    console.error("Error sending email:", error);
+  } catch (error: any) {
+    console.error("Unhandled error in function:", error);
     
     return new Response(
-      JSON.stringify({ error: error.message || "Failed to send email" }),
+      JSON.stringify({ 
+        error: "Server error", 
+        message: error.message || "An unexpected error occurred" 
+      }),
       { 
         status: 500, 
-        headers: { "Content-Type": "application/json", ...corsHeaders } 
+        headers: corsHeaders 
       }
     );
   }

@@ -55,23 +55,42 @@ const ContactForm = ({ className }: ContactFormProps) => {
         body: JSON.stringify(formState),
       });
       
-      // Always get text first to handle potential non-JSON responses
-      const responseText = await response.text();
       console.log("Response status:", response.status);
-      console.log("Response text:", responseText);
+      console.log("Response headers:", Object.fromEntries([...response.headers]));
       
-      // Try to parse the response as JSON if possible
-      let result;
-      try {
-        result = responseText ? JSON.parse(responseText) : {};
-      } catch (parseError) {
-        console.error("Failed to parse response as JSON:", parseError);
-        throw new Error(`Server returned invalid response. Status: ${response.status}`);
+      // Check if response is ok before trying to parse
+      if (!response.ok) {
+        // For error responses, try to get error details if available
+        const errorText = await response.text();
+        console.error("Error response:", errorText);
+        
+        let errorMessage = `Server error: ${response.status}`;
+        try {
+          // Try to parse as JSON if possible
+          const errorData = JSON.parse(errorText);
+          errorMessage = errorData.error || errorMessage;
+        } catch (parseError) {
+          // If it's not JSON, use the response text or status
+          console.error("Error response is not JSON:", errorText);
+        }
+        
+        throw new Error(errorMessage);
       }
       
-      // Check if the response was successful
-      if (!response.ok) {
-        throw new Error(result.error || `Failed with status: ${response.status}`);
+      // For successful responses, get the content type
+      const contentType = response.headers.get("content-type");
+      
+      if (contentType && contentType.includes("application/json")) {
+        // Handle JSON response
+        const result = await response.json();
+        console.log("Successfully parsed JSON response:", result);
+      } else {
+        // Handle non-JSON response
+        const text = await response.text();
+        console.log("Received non-JSON response:", text);
+        
+        // Still consider this a success since status is ok
+        console.log("Response was successful with non-JSON content");
       }
       
       // Show success message
