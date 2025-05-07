@@ -28,6 +28,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [debugInfo, setDebugInfo] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -39,12 +40,14 @@ const ContactForm = ({ className }: ContactFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setDebugInfo(null);
     
     try {
       // Get the current domain and construct the API URL
       const currentDomain = window.location.origin;
       const apiUrl = `${currentDomain}/functions/v1/send-contact-email`;
       console.log("Sending form to API URL:", apiUrl);
+      console.log("Form data being sent:", formState);
       
       // Send to the Supabase Edge Function
       const response = await fetch(apiUrl, {
@@ -58,42 +61,35 @@ const ContactForm = ({ className }: ContactFormProps) => {
       console.log("Response status:", response.status);
       console.log("Response headers:", Object.fromEntries([...response.headers]));
       
-      // Check if response is ok before trying to parse
-      if (!response.ok) {
-        // For error responses, try to get error details if available
-        const errorText = await response.text();
-        console.error("Error response:", errorText);
+      // Get response content regardless of status
+      const responseText = await response.text();
+      console.log("Raw response:", responseText);
+      
+      let responseData;
+      try {
+        // Try to parse as JSON
+        responseData = JSON.parse(responseText);
+        console.log("Parsed response data:", responseData);
+      } catch (parseError) {
+        console.error("Failed to parse response as JSON:", parseError);
+        responseData = { error: "Invalid response format", rawResponse: responseText };
+      }
+      
+      // Check if response indicates success
+      if (!response.ok || responseData.error) {
+        const errorMessage = responseData.error || 
+                            responseData.details || 
+                            `Server error: ${response.status}`;
         
-        let errorMessage = `Server error: ${response.status}`;
-        try {
-          // Try to parse as JSON if possible
-          const errorData = JSON.parse(errorText);
-          errorMessage = errorData.error || errorMessage;
-        } catch (parseError) {
-          // If it's not JSON, use the response text or status
-          console.error("Error response is not JSON:", errorText);
-        }
+        console.error("Error response:", errorMessage);
+        
+        // Show detailed error for debugging
+        setDebugInfo(JSON.stringify(responseData, null, 2));
         
         throw new Error(errorMessage);
       }
       
-      // For successful responses, get the content type
-      const contentType = response.headers.get("content-type");
-      
-      if (contentType && contentType.includes("application/json")) {
-        // Handle JSON response
-        const result = await response.json();
-        console.log("Successfully parsed JSON response:", result);
-      } else {
-        // Handle non-JSON response
-        const text = await response.text();
-        console.log("Received non-JSON response:", text);
-        
-        // Still consider this a success since status is ok
-        console.log("Response was successful with non-JSON content");
-      }
-      
-      // Show success message
+      // Email sent successfully
       toast({
         title: "Message Sent",
         description: "Thank you for contacting us. We'll respond shortly.",
@@ -112,7 +108,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
       console.error("Error sending form:", error);
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        description: error instanceof Error 
+          ? `${error.message}. Please check that the server has been configured properly.` 
+          : "Failed to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -194,6 +192,17 @@ const ContactForm = ({ className }: ContactFormProps) => {
         >
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
+
+        {debugInfo && (
+          <div className="mt-4 p-4 bg-amber-50 border border-amber-300 rounded-md">
+            <p className="text-sm font-medium text-amber-800 mb-2">
+              Debug information (the email might not have been sent):
+            </p>
+            <pre className="text-xs overflow-auto bg-gray-100 p-2 rounded">
+              {debugInfo}
+            </pre>
+          </div>
+        )}
       </form>
     </div>
   );

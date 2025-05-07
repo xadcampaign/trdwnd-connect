@@ -3,7 +3,8 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
 // Initialize Resend with API key
-const resend = new Resend(Deno.env.get("RESEND_API_KEY") || "re_2k6adp5u_Pvh9sJvpy8KwgYSUQGGhFso2");
+const resendApiKey = Deno.env.get("RESEND_API_KEY");
+const resend = new Resend(resendApiKey || "re_2k6adp5u_Pvh9sJvpy8KwgYSUQGGhFso2");
 
 // CORS headers for browser requests
 const corsHeaders = {
@@ -23,6 +24,7 @@ interface ContactFormData {
 
 const handler = async (req: Request): Promise<Response> => {
   console.log("Received request:", req.method);
+  console.log("Using Resend API Key:", resendApiKey ? "API key exists" : "No API key found");
   
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -69,6 +71,8 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     try {
+      console.log("Attempting to send email via Resend...");
+
       // Send email using Resend
       const emailResponse = await resend.emails.send({
         from: "EuroGrowth Contact Form <onboarding@resend.dev>",
@@ -78,7 +82,21 @@ const handler = async (req: Request): Promise<Response> => {
         reply_to: formData.email,
       });
 
-      console.log("Email sent successfully:", emailResponse);
+      console.log("Email send attempt complete, response:", emailResponse);
+
+      if (emailResponse.error) {
+        console.error("Resend API returned error:", emailResponse.error);
+        return new Response(
+          JSON.stringify({ 
+            error: "Failed to send email", 
+            details: emailResponse.error
+          }),
+          { 
+            status: 500, 
+            headers: corsHeaders 
+          }
+        );
+      }
 
       return new Response(
         JSON.stringify({ success: true, id: emailResponse.id }), 
