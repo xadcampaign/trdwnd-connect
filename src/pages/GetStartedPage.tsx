@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -32,7 +33,7 @@ const GetStartedPage = () => {
     
     // Prepare the email data
     const emailData = {
-      to: "eric.dauchy@eurogrowth.ca",
+      to: "Eric.Dauchy@EuroGrowth.ca",
       subject: `New contact form submission from ${formState.name}`,
       message: `
         Name: ${formState.name}

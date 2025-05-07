@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -29,6 +30,27 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    // Prepare the email data
+    const emailData = {
+      to: "Eric.Dauchy@EuroGrowth.ca",
+      subject: `New contact form submission from ${formState.name}`,
+      message: `
+        Name: ${formState.name}
+        Email: ${formState.email}
+        Company: ${formState.company}
+        Phone: ${formState.phone}
+        
+        Message:
+        ${formState.message}
+      `,
+    };
+    
+    // Send email using a mailto link
+    const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.message)}`;
+    
+    // Open the default email client
+    window.open(mailtoLink, '_blank');
     
     // Simulate form submission
     setTimeout(() => {
