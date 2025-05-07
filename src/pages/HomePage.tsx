@@ -5,7 +5,8 @@ import {
   Handshake, 
   TrendingUp, 
   Users,
-  ChevronRight
+  ChevronRight,
+  Link as LinkIcon
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -178,6 +179,30 @@ const HomePage = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
               <Link to="/services">Learn More</Link>
+            </Button>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <LinkIcon className="h-6 w-6 text-trdwnd-gold" />
+              <h3 className="text-xl font-semibold text-white">Complete Our Business Questionnaire</h3>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              To help us understand your business better, please take a few minutes to fill out our detailed questionnaire. This will enable us to provide you with tailored solutions for your European market entry.
+            </p>
+            <Button 
+              asChild
+              className="bg-white hover:bg-white/90 text-trdwnd-navy"
+            >
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf6ef8G0TUE0oHvUmD3Ik7Pxz6hJkC4THU4kTotAstCUZ25og/viewform?usp=header" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                <LinkIcon className="mr-2 h-4 w-4" />
+                Access Questionnaire
+              </a>
             </Button>
           </div>
         </div>

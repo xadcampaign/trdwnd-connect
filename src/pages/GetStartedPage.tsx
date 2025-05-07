@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, MessageSquare, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, Clock, Link } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const GetStartedPage = () => {
@@ -139,6 +139,30 @@ const GetStartedPage = () => {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
+
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="flex items-center gap-3 mb-4">
+                <Link className="h-6 w-6 text-trdwnd-gold" />
+                <h3 className="text-xl font-semibold text-trdwnd-navy">Complete Our Detailed Questionnaire</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                For a more structured approach, please fill out our Google Forms questionnaire. This helps us gather comprehensive information about your business and expansion goals.
+              </p>
+              <Button 
+                asChild
+                className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium"
+              >
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf6ef8G0TUE0oHvUmD3Ik7Pxz6hJkC4THU4kTotAstCUZ25og/viewform?usp=header" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                >
+                  <Link className="mr-2 h-4 w-4" />
+                  Start Questionnaire
+                </a>
+              </Button>
+            </div>
           </div>
           
           <div>
