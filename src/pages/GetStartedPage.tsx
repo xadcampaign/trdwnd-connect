@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -30,6 +29,27 @@ const GetStartedPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    // Prepare the email data
+    const emailData = {
+      to: "eric.dauchy@eurogrowth.ca",
+      subject: `New contact form submission from ${formState.name}`,
+      message: `
+        Name: ${formState.name}
+        Email: ${formState.email}
+        Company: ${formState.company}
+        Phone: ${formState.phone}
+        
+        Message:
+        ${formState.message}
+      `,
+    };
+    
+    // Send email using a mailto link
+    const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.message)}`;
+    
+    // Open the default email client
+    window.open(mailtoLink, '_blank');
     
     // Simulate form submission
     setTimeout(() => {
@@ -205,7 +225,7 @@ const GetStartedPage = () => {
                   <div>
                     <p className="font-medium">Offices</p>
                     <address className="text-gray-300 not-italic">
-                      Offices in Toronto, Vancouver, Brussels and London
+                      Offices in Toronto, Vancouver, Brussels, London and Hong Kong
                     </address>
                   </div>
                 </li>
@@ -230,7 +250,7 @@ const GetStartedPage = () => {
                   <MapPin className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <address className="text-gray-600 not-italic">
-                      Offices in Brussels and London
+                      Offices in Brussels, London and Hong Kong
                     </address>
                   </div>
                 </li>
@@ -238,8 +258,8 @@ const GetStartedPage = () => {
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <a href="tel:+31201234567" className="text-gray-600 hover:text-trdwnd-navy transition-colors">
-                      +31 (20) 123-4567
+                    <a href="tel:+32498513077" className="text-gray-600 hover:text-trdwnd-navy transition-colors">
+                      +32 498 51 30 77
                     </a>
                   </div>
                 </li>
