@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
@@ -12,7 +11,6 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
               <span>EUROGROWTH</span>
-              <span className="text-trdwnd-gold font-light ml-1">LLC</span>
             </h3>
             <p className="text-gray-300 mb-4">
               Expanding Canadian Export Markets Through Elite EU Partnerships
@@ -153,7 +151,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} EUROGROWTH LLC. All rights reserved.
+              &copy; {currentYear} EUROGROWTH. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link

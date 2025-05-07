@@ -67,7 +67,6 @@ const Navbar = () => {
         {/* Logo - Now on the right side and slightly smaller due to longer name */}
         <Link to="/" className="flex items-center gap-3 order-first md:order-last">
           <span className="text-[#FF0000] font-bold text-5xl">EUROGROWTH</span>
-          <span className="text-trdwnd-gold font-light text-xl">LLC</span>
         </Link>
 
         {/* Mobile Navigation Toggle */}
