@@ -1,7 +1,8 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
-import { Link, MessageSquare, Phone, MapPin, Clock } from "lucide-react";
+import { Link, MessageSquare, Phone, MapPin, Clock, Mail } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const ContactPage = () => {
