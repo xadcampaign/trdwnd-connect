@@ -285,11 +285,11 @@ const GetStartedPage = () => {
             },
             {
               question: "Do you work with businesses of all sizes?",
-              answer: "Yes, we work with Canadian businesses ranging from innovative startups to established enterprises. Our services are tailored to meet the specific needs and resources of each client."
+              answer: "We work with Canadian businesses with turnover from 50 - 500 million CAD. Our services are tailored to meet the specific needs and resources of each client."
             },
             {
               question: "Which European countries do you operate in?",
-              answer: "We have experience and networks across the entire European Union, with particular strengths in Germany, France, the Netherlands, Spain, Italy, and the Scandinavian countries."
+              answer: "We provide results in the entire European Union, the UK and Israel."
             },
             {
               question: "What are your fees and pricing structure?",
