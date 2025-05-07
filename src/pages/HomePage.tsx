@@ -185,7 +185,7 @@ const HomePage = () => {
           <div className="mt-12 pt-8 border-t border-gray-700">
             <div className="flex items-center justify-center gap-3 mb-4">
               <LinkIcon className="h-6 w-6 text-trdwnd-gold" />
-              <h3 className="text-xl font-semibold text-white">Complete Our Business Questionnaire</h3>
+              <h3 className="text-xl font-semibold text-white">Reason for Contact</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               To help us understand your business better, please take a few minutes to fill out our detailed questionnaire. This will enable us to provide you with tailored solutions for your European market entry.
@@ -201,7 +201,7 @@ const HomePage = () => {
                 className="inline-flex items-center"
               >
                 <LinkIcon className="mr-2 h-4 w-4" />
-                Access Questionnaire
+                How Can We Help You?
               </a>
             </Button>
           </div>

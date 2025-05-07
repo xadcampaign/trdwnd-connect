@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -143,7 +144,7 @@ const GetStartedPage = () => {
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex items-center gap-3 mb-4">
                 <Link className="h-6 w-6 text-trdwnd-gold" />
-                <h3 className="text-xl font-semibold text-trdwnd-navy">Complete Our Detailed Questionnaire</h3>
+                <h3 className="text-xl font-semibold text-trdwnd-navy">Reason for Contact</h3>
               </div>
               <p className="text-gray-600 mb-6">
                 For a more structured approach, please fill out our Google Forms questionnaire. This helps us gather comprehensive information about your business and expansion goals.
@@ -159,7 +160,7 @@ const GetStartedPage = () => {
                   className="inline-flex items-center"
                 >
                   <Link className="mr-2 h-4 w-4" />
-                  Start Questionnaire
+                  How Can We Help You?
                 </a>
               </Button>
             </div>
