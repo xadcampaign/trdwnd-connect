@@ -173,8 +173,8 @@ const GetStartedPage = () => {
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:Eric.Dauchy@EuroGrowth.eu" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Eric.Dauchy@EuroGrowth.eu
+                    <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Eric.Dauchy@EuroGrowth.ca
                     </a>
                   </div>
                 </li>
@@ -183,8 +183,8 @@ const GetStartedPage = () => {
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:Eric.Gerritsen@EuroGrowth.eu" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Eric.Gerritsen@EuroGrowth.eu
+                    <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Eric.Gerritsen@EuroGrowth.ca
                     </a>
                   </div>
                 </li>
