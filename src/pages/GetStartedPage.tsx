@@ -52,7 +52,7 @@ const GetStartedPage = () => {
     // Open the default email client
     window.open(mailtoLink, '_blank');
     
-    // Simulate form submission
+    // Show success toast and reset form
     setTimeout(() => {
       toast({
         title: "Message Sent",
