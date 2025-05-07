@@ -61,6 +61,10 @@ const ContactForm = ({ className }: ContactFormProps) => {
       console.log("Response status:", response.status);
       console.log("Response headers:", Object.fromEntries([...response.headers]));
       
+      // Check content type to better handle errors
+      const contentType = response.headers.get("Content-Type");
+      console.log("Response content type:", contentType);
+      
       // Get response content regardless of status
       const responseText = await response.text();
       console.log("Raw response:", responseText);
@@ -68,11 +72,18 @@ const ContactForm = ({ className }: ContactFormProps) => {
       let responseData;
       try {
         // Try to parse as JSON
-        responseData = JSON.parse(responseText);
-        console.log("Parsed response data:", responseData);
+        if (contentType?.includes("application/json") || responseText.trim().startsWith("{")) {
+          responseData = JSON.parse(responseText);
+          console.log("Parsed response data:", responseData);
+        } else {
+          // Handle non-JSON response
+          console.error("Received non-JSON response:", responseText);
+          throw new Error("Server returned non-JSON response");
+        }
       } catch (parseError) {
         console.error("Failed to parse response as JSON:", parseError);
-        responseData = { error: "Invalid response format", rawResponse: responseText };
+        setDebugInfo(`Response was not valid JSON. Content type: ${contentType || "unknown"}\n\nFirst 500 characters of raw response:\n${responseText.substring(0, 500)}...`);
+        throw new Error("Invalid response format");
       }
       
       // Check if response indicates success
