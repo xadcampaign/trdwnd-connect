@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -8,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, MessageSquare, Clock, Link } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import ContactForm from "@/components/ContactForm";
 
 const GetStartedPage = () => {
   const { toast } = useToast();
@@ -110,79 +110,7 @@ const GetStartedPage = () => {
               Complete the form below and one of our international business specialists will get back to you within 24 hours.
             </p>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email address"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="company">Company Name *</Label>
-                  <Input
-                    id="company"
-                    name="company"
-                    value={formState.company}
-                    onChange={handleChange}
-                    placeholder="Enter your company name"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formState.phone}
-                    onChange={handleChange}
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="message">Message *</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your business and how we can help with your European market expansion goals"
-                  className="min-h-[150px]"
-                  required
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                disabled={isSubmitting} 
-                className="w-full md:w-auto bg-trdwnd-navy hover:bg-trdwnd-darkblue"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
+            <ContactForm />
 
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex items-center gap-3 mb-4">

@@ -30,8 +30,20 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     // Parse the request body
-    const formData: ContactFormData = await req.json();
-    console.log("Parsed form data:", formData);
+    let formData: ContactFormData;
+    try {
+      formData = await req.json();
+      console.log("Parsed form data:", formData);
+    } catch (error) {
+      console.error("Failed to parse request body:", error);
+      return new Response(
+        JSON.stringify({ error: "Invalid request body format" }),
+        { 
+          status: 400, 
+          headers: { "Content-Type": "application/json", ...corsHeaders } 
+        }
+      );
+    }
     
     // Validate required fields
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
