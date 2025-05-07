@@ -71,18 +71,20 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     try {
-      console.log("Attempting to send email via Resend...");
+      console.log("Attempting to send email via Resend batch send...");
 
-      // Send email using Resend
-      const emailResponse = await resend.emails.send({
-        from: "EuroGrowth Contact Form <onboarding@resend.dev>",
-        to: "eric.dauchy@eurogrowth.ca",
-        subject: `New contact form submission from ${formData.name}`,
-        html: emailContent,
-        reply_to: formData.email,
-      });
+      // Send email using Resend batch send
+      const emailResponse = await resend.batch.send([
+        {
+          from: "EuroGrowth Contact Form <onboarding@resend.dev>",
+          to: ["eric.dauchy@eurogrowth.ca"],
+          subject: `New contact form submission from ${formData.name}`,
+          html: emailContent,
+          reply_to: formData.email,
+        }
+      ]);
 
-      console.log("Email send attempt complete, response:", emailResponse);
+      console.log("Email batch send attempt complete, response:", emailResponse);
 
       if (emailResponse.error) {
         console.error("Resend API returned error:", emailResponse.error);
@@ -99,7 +101,7 @@ const handler = async (req: Request): Promise<Response> => {
       }
 
       return new Response(
-        JSON.stringify({ success: true, id: emailResponse.id }), 
+        JSON.stringify({ success: true, data: emailResponse }), 
         {
           status: 200,
           headers: corsHeaders
