@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -31,8 +32,13 @@ const ContactPage = () => {
     setIsSubmitting(true);
     
     try {
+      // Get the current domain
+      const currentDomain = window.location.origin;
+      const apiUrl = `${currentDomain}/functions/v1/send-contact-email`;
+      console.log("Sending form to API URL:", apiUrl);
+      
       // Send to the Supabase Edge Function
-      const response = await fetch(`${window.location.origin}/functions/v1/send-contact-email`, {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,11 +46,25 @@ const ContactPage = () => {
         body: JSON.stringify(formState),
       });
       
-      const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || "Failed to send message");
+        // Get response text for error messages that might not be JSON
+        const text = await response.text();
+        let errorMessage = "Failed to send message";
+        
+        try {
+          // Try to parse as JSON
+          const errorData = JSON.parse(text);
+          errorMessage = errorData.error || errorMessage;
+        } catch (parseError) {
+          // If it's not valid JSON, use the response text
+          console.error("Error response is not JSON:", text);
+          errorMessage = `Server error: ${response.status}`;
+        }
+        
+        throw new Error(errorMessage);
       }
+      
+      const result = await response.json();
       
       // Show success message
       toast({

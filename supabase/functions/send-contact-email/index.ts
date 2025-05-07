@@ -21,6 +21,8 @@ interface ContactFormData {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("Received request:", req.method);
+  
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -29,6 +31,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     // Parse the request body
     const formData: ContactFormData = await req.json();
+    console.log("Parsed form data:", formData);
     
     // Validate required fields
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
