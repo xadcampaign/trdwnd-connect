@@ -59,9 +59,39 @@ const HomePage = () => {
       </Section>
 
       <Section 
+        title="Our Partners" 
+        subtitle="Trusted by leading Canadian organizations and government agencies in facilitating international business growth."
+        bg="light"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/1abfae25-7a35-45ef-9b8d-86b2d4b82ef1.png" 
+              alt="BDO Canada" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/9f2314f8-b675-4e0c-832a-d45ef45fb31f.png" 
+              alt="British Columbia" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/bcb8137c-be35-429b-b7a9-0ec3c0cfe957.png" 
+              alt="Export Development Canada" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Section 
         title="Our Services" 
         subtitle="We offer comprehensive solutions to help Canadian companies successfully navigate and thrive in European markets."
-        bg="light"
+        bg="white"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
