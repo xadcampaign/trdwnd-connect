@@ -63,7 +63,7 @@ const HomePage = () => {
         subtitle="Trusted by leading Canadian organizations and government agencies in facilitating international business growth."
         bg="light"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-items-center max-w-6xl mx-auto">
           <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
             <img 
               src="/lovable-uploads/1abfae25-7a35-45ef-9b8d-86b2d4b82ef1.png" 
@@ -82,6 +82,27 @@ const HomePage = () => {
             <img 
               src="/lovable-uploads/bcb8137c-be35-429b-b7a9-0ec3c0cfe957.png" 
               alt="Export Development Canada" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/a23d3cf2-3749-484b-aafe-10ed9aa3f1cc.png" 
+              alt="InvestHK - Hong Kong Special Administrative Region" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/db3b1ef1-4be0-47d6-8bba-7316f0b99960.png" 
+              alt="Government of Canada" 
+              className="max-h-16 max-w-full object-contain"
+            />
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow w-full h-32 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/03053d81-a5f3-470d-b7e9-121c3c7062e1.png" 
+              alt="INOUE Public Relations" 
               className="max-h-16 max-w-full object-contain"
             />
           </div>
