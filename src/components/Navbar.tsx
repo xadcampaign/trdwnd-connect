@@ -64,12 +64,12 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Logo - Now on the right side and using the new logo image */}
+        {/* Logo - Now on the right side and super big */}
         <Link to="/" className="flex items-center gap-3 order-first md:order-last">
           <img 
             src="/lovable-uploads/531b7060-507d-43ae-997f-b2480cf482bc.png" 
             alt="EuroGrowth Logo" 
-            className="h-12 w-auto"
+            className="h-24 md:h-32 w-auto"
           />
         </Link>
 

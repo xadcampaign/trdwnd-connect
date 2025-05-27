@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/531b7060-507d-43ae-997f-b2480cf482bc.png" 
                 alt="EuroGrowth Logo" 
-                className="h-8 w-auto brightness-0 invert"
+                className="h-16 w-auto brightness-0 invert"
               />
               <span>EUROGROWTH</span>
             </h3>
