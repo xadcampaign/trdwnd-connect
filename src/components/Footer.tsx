@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
@@ -9,12 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
-              <img 
-                src="/lovable-uploads/531b7060-507d-43ae-997f-b2480cf482bc.png" 
-                alt="EuroGrowth Logo" 
-                className="h-16 w-auto brightness-0 invert"
-              />
+            <h3 className="text-xl font-bold mb-4 flex items-center">
               <span>EUROGROWTH</span>
             </h3>
             <p className="text-gray-300 mb-4">

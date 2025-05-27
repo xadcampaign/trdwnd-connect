@@ -64,13 +64,9 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Logo - Now on the right side and super big */}
+        {/* Logo - Now on the right side and slightly smaller due to longer name */}
         <Link to="/" className="flex items-center gap-3 order-first md:order-last">
-          <img 
-            src="/lovable-uploads/531b7060-507d-43ae-997f-b2480cf482bc.png" 
-            alt="EuroGrowth Logo" 
-            className="h-24 md:h-32 w-auto"
-          />
+          <span className="text-[#FF0000] font-bold text-5xl">EUROGROWTH</span>
         </Link>
 
         {/* Mobile Navigation Toggle */}
