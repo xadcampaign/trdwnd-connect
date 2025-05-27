@@ -103,7 +103,7 @@ const HomePage = () => {
             <img 
               src="/lovable-uploads/03053d81-a5f3-470d-b7e9-121c3c7062e1.png" 
               alt="INOUE Public Relations" 
-              className="max-h-16 max-w-full object-contain"
+              className="max-h-24 max-w-full object-contain"
             />
           </div>
         </div>
