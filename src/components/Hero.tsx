@@ -20,7 +20,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <div
-      className={`relative w-full ${height} min-h-[400px] flex items-center`}
+      className={`relative w-full ${height} min-h-[400px] flex items-center pt-20 md:pt-24`}
     >
       {/* Background Image */}
       <div
@@ -30,7 +30,7 @@ const Hero = ({
 
       {/* Enhanced Overlay for better text readability */}
       {overlay && (
-        <div className="absolute inset-0 bg-black/60 hero-pattern"></div>
+        <div className="absolute inset-0 bg-black/70 hero-pattern"></div>
       )}
 
       {/* Content */}
@@ -40,7 +40,7 @@ const Hero = ({
             {title}
           </h1>
           {subtitle && (
-            <div className="text-2xl md:text-3xl text-white mb-10 animate-slide-up drop-shadow-md bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+            <div className="text-2xl md:text-3xl text-white mb-10 animate-slide-up drop-shadow-md bg-black/30 p-4 rounded-lg backdrop-blur-sm">
               {subtitle}
             </div>
           )}
