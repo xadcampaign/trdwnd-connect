@@ -28,21 +28,21 @@ const Hero = ({
         style={{ backgroundImage: `url(${image})` }}
       />
 
-      {/* Overlay */}
+      {/* Enhanced Overlay for better text readability */}
       {overlay && (
-        <div className="absolute inset-0 bg-trdwnd-navy/70 hero-pattern"></div>
+        <div className="absolute inset-0 bg-black/60 hero-pattern"></div>
       )}
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl text-center md:text-left">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 animate-fade-in">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 animate-fade-in drop-shadow-lg">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-2xl md:text-3xl text-gray-200 mb-10 animate-slide-up">
+            <div className="text-2xl md:text-3xl text-white mb-10 animate-slide-up drop-shadow-md bg-black/20 p-4 rounded-lg backdrop-blur-sm">
               {subtitle}
-            </p>
+            </div>
           )}
           {children}
         </div>
