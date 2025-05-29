@@ -64,9 +64,18 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Logo - Now on the right side and slightly smaller due to longer name */}
-        <Link to="/" className="flex items-center gap-3 order-first md:order-last">
-          <span className="text-[#FF0000] font-bold text-5xl">EUROGROWTH</span>
+        {/* Logo area with flag and new logo */}
+        <Link to="/" className="flex flex-col items-center gap-1 order-first md:order-last">
+          <img 
+            src="/lovable-uploads/2c80b797-3521-4700-92e9-711c22bdf138.png" 
+            alt="Canada-EU Partnership" 
+            className="w-12 h-auto"
+          />
+          <img 
+            src="/lovable-uploads/b6db057a-109c-4d30-8766-909c77dffe5d.png" 
+            alt="EuroGrowth" 
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Mobile Navigation Toggle */}
