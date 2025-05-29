@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
@@ -125,11 +126,21 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
-                <span className="text-gray-300">Eric.Dauchy@EuroGrowth.ca</span>
+                <div>
+                  <p className="text-gray-300 font-medium">Eric Dauchy</p>
+                  <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    Contact
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
-                <span className="text-gray-300">Eric.Gerritsen@EuroGrowth.ca</span>
+                <div>
+                  <p className="text-gray-300 font-medium">Eric Gerritsen</p>
+                  <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    Contact
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />

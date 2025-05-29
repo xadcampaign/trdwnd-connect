@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -144,9 +145,9 @@ const GetStartedPage = () => {
                 <li className="flex items-start">
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">Eric Dauchy</p>
                     <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Eric.Dauchy@EuroGrowth.ca
+                      Contact
                     </a>
                   </div>
                 </li>
@@ -154,9 +155,9 @@ const GetStartedPage = () => {
                 <li className="flex items-start">
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">Eric Gerritsen</p>
                     <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Eric.Gerritsen@EuroGrowth.ca
+                      Contact
                     </a>
                   </div>
                 </li>
