@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -115,7 +114,7 @@ const ContactPage = () => {
                   <MapPin className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <address className="text-gray-600 not-italic">
-                      Offices in Brussels and London
+                      Brussels Office
                     </address>
                   </div>
                 </li>
@@ -123,8 +122,8 @@ const ContactPage = () => {
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <a href="tel:+31201234567" className="text-gray-600 hover:text-trdwnd-navy transition-colors">
-                      +31 (20) 123-4567
+                    <a href="tel:+32498513077" className="text-gray-600 hover:text-trdwnd-navy transition-colors">
+                      +32 498 51 30 77
                     </a>
                   </div>
                 </li>

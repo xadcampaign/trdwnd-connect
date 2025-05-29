@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
@@ -149,7 +148,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <span className="text-gray-300">
-                  Offices in Toronto, Vancouver, Brussels, London and Hong Kong
+                  Victoria/Hong Kong/Brussels
                 </span>
               </li>
             </ul>
