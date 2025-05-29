@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -38,7 +39,7 @@ const ServicesPage = () => {
       <Hero
         title="Expanding Canadian Export Markets"
         subtitle="Through Elite EU Partnerships and CETA Advantages"
-        image="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        image="/lovable-uploads/b063649b-d09d-4cbb-8610-7a06b6953065.png"
         height="lg:h-[70vh]"
       />
 
