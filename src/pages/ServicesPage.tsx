@@ -498,9 +498,9 @@ const ServicesPage = () => {
             </Button>
             <Button 
               asChild 
-              variant="static" 
+              variant="outline" 
               size="lg" 
-              className="border-white text-white"
+              className="border-trdwnd-gold text-trdwnd-gold bg-transparent hover:bg-trdwnd-gold hover:text-trdwnd-navy"
             >
               <Link to="/industries">Explore Industries</Link>
             </Button>
