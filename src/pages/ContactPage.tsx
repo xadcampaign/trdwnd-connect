@@ -90,7 +90,7 @@ const ContactPage = () => {
                   <div>
                     <p className="font-medium">Offices</p>
                     <address className="text-gray-600 not-italic">
-                      Offices in Toronto, Vancouver, Brussels and London
+                      Victoria/Hong Kong/Brussels
                     </address>
                   </div>
                 </li>
