@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -47,7 +46,7 @@ const ServicesPage = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold text-trdwnd-navy mb-6">Accelerating Canadian Business in Europe</h2>
           <p className="text-lg text-gray-600 mb-4">
-            With U.S. tariffs on Canadian goods reaching 25%, the urgency for Canadian businesses to diversify their export markets has never been greater. TRDWND LLC is the premier connector for Canadian companies seeking high-quality partnerships in the European Union.
+            With U.S. tariffs on Canadian goods reaching 25%, the urgency for Canadian businesses to diversify their export markets has never been greater. EuroGrowth LLC is the premier connector for Canadian companies seeking high-quality partnerships in the European Union.
           </p>
           <p className="text-lg text-gray-600">
             Leveraging the Canada-EU Comprehensive Economic and Trade Agreement (CETA), we help businesses access a market of over 440 million EU consumers with reduced tariffs, streamlined regulations, and faster market entry. Our deep network of trusted European manufacturers, distributors, and investors ensures Canadian companies establish profitable, long-term relationships across diverse industries.
@@ -63,7 +62,7 @@ const ServicesPage = () => {
             </div>
             <h2 className="text-3xl font-bold text-trdwnd-navy mb-4">Our Business Approach</h2>
             <p className="text-gray-600 mb-6">
-              TRDWND works with business owners, principals, and boards to deliver measurable results with proven capabilities in deal leadership, negotiation, and market intelligence.
+              EuroGrowth works with business owners, principals, and boards to deliver measurable results with proven capabilities in deal leadership, negotiation, and market intelligence.
             </p>
             <div className="space-y-4 mb-8">
               {[
@@ -415,7 +414,7 @@ const ServicesPage = () => {
             </ul>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-            <h3 className="text-2xl font-bold text-trdwnd-navy mb-4">The TRDWND Process</h3>
+            <h3 className="text-2xl font-bold text-trdwnd-navy mb-4">The EuroGrowth Process</h3>
             <ul className="space-y-4">
               {[
                 {
@@ -459,7 +458,7 @@ const ServicesPage = () => {
 
       <Section bg="dark" className="py-20 md:py-28">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose TRDWND?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose EuroGrowth?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
             {[
               {
