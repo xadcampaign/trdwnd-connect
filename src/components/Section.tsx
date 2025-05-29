@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 
 interface SectionProps {
@@ -8,6 +7,7 @@ interface SectionProps {
   className?: string;
   id?: string;
   bg?: "white" | "light" | "dark";
+  hideLogos?: boolean;
 }
 
 const Section = ({
@@ -17,6 +17,7 @@ const Section = ({
   className = "",
   id,
   bg = "white",
+  hideLogos = false,
 }: SectionProps) => {
   const bgClasses = {
     white: "bg-white",
@@ -29,23 +30,28 @@ const Section = ({
       id={id}
       className={`py-16 md:py-24 ${bgClasses[bg]} ${className} relative`}
     >
-      {/* Flag icon stays on the right */}
-      <div className="absolute top-4 right-4 opacity-70 flex flex-col items-center gap-1">
-        <img 
-          src="/lovable-uploads/2c80b797-3521-4700-92e9-711c22bdf138.png" 
-          alt="Canada-EU Partnership" 
-          className="w-12 h-auto rounded shadow-sm"
-        />
-      </div>
+      {/* Only show logos if hideLogos is false */}
+      {!hideLogos && (
+        <>
+          {/* Flag icon stays on the right */}
+          <div className="absolute top-4 right-4 opacity-70 flex flex-col items-center gap-1">
+            <img 
+              src="/lovable-uploads/2c80b797-3521-4700-92e9-711c22bdf138.png" 
+              alt="Canada-EU Partnership" 
+              className="w-12 h-auto rounded shadow-sm"
+            />
+          </div>
 
-      {/* EUROGROWTH logo on the left side - much bigger */}
-      <div className="absolute top-4 left-4 opacity-80">
-        <img 
-          src="/lovable-uploads/b6db057a-109c-4d30-8766-909c77dffe5d.png" 
-          alt="EuroGrowth" 
-          className="h-16 w-auto"
-        />
-      </div>
+          {/* EUROGROWTH logo on the left side - much bigger */}
+          <div className="absolute top-4 left-4 opacity-80">
+            <img 
+              src="/lovable-uploads/b6db057a-109c-4d30-8766-909c77dffe5d.png" 
+              alt="EuroGrowth" 
+              className="h-16 w-auto"
+            />
+          </div>
+        </>
+      )}
       
       <div className="container mx-auto px-4">
         {(title || subtitle) && (
