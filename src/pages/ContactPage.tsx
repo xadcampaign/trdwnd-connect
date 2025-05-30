@@ -59,7 +59,7 @@ const ContactPage = () => {
                   <div>
                     <p className="font-medium">Eric Dauchy</p>
                     <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Contact
+                      Eric.Dauchy@EuroGrowth.ca
                     </a>
                   </div>
                 </li>
@@ -69,7 +69,7 @@ const ContactPage = () => {
                   <div>
                     <p className="font-medium">Eric Gerritsen</p>
                     <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                      Contact
+                      Eric.Gerritsen@EuroGrowth.ca
                     </a>
                   </div>
                 </li>
