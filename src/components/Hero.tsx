@@ -20,7 +20,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <div
-      className={`relative w-full ${height} min-h-[400px] flex items-center pt-20 md:pt-24`}
+      className={`relative w-full ${height} min-h-[400px] flex items-center pt-28 md:pt-32`}
     >
       {/* Background Image */}
       <div
