@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -19,11 +20,11 @@ const HomePage = () => {
         subtitle={<span>We connect <span className="text-[#ea384c]">Canadian companies</span> with high-quality partners in the European Union to maximize market potential and drive international growth.</span>}
         image="/lovable-uploads/192ae08f-974b-4254-a059-f245c321a59a.png"
       >
-        <div className="flex flex-col sm:flex-row gap-6 mt-10 justify-center md:justify-start">
-          <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-semibold px-8 py-4 text-lg shadow-xl border-2 border-trdwnd-gold/20">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+          <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
             <Link to="/services">Our Services</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-2 border-white text-white bg-white/10 hover:bg-white hover:text-trdwnd-navy font-semibold px-8 py-4 text-lg shadow-xl backdrop-blur-sm">
+          <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
             <Link to="/get-started">Contact Us</Link>
           </Button>
         </div>
@@ -219,32 +220,31 @@ const HomePage = () => {
         bg="dark"
         className="py-20 md:py-28"
       >
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Ready to Expand Your Business into Europe?</h2>
-          <p className="text-gray-300 text-xl mb-10 leading-relaxed">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Expand Your Business into Europe?</h2>
+          <p className="text-gray-300 text-xl mb-8">
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-semibold px-8 py-4 text-lg shadow-xl">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
               <Link to="/get-started">Get Started</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-2 border-white text-white bg-white/10 hover:bg-white hover:text-trdwnd-navy font-semibold px-8 py-4 text-lg shadow-xl">
+            <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
               <Link to="/services">Learn More</Link>
             </Button>
           </div>
           
-          <div className="pt-8 border-t border-gray-700">
-            <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <LinkIcon className="h-6 w-6 text-trdwnd-gold" />
-              <h3 className="text-2xl font-semibold text-white">Reason for Contact</h3>
+              <h3 className="text-xl font-semibold text-white">Reason for Contact</h3>
             </div>
-            <p className="text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed text-lg">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               To help us understand your business better, please take a few minutes to fill out our detailed questionnaire. This will enable us to provide you with tailored solutions for your European market entry.
             </p>
             <Button 
               asChild
-              size="lg"
-              className="bg-white hover:bg-white/90 text-trdwnd-navy font-semibold px-8 py-4 text-lg shadow-xl"
+              className="bg-white hover:bg-white/90 text-trdwnd-navy"
             >
               <a 
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf6ef8G0TUE0oHvUmD3Ik7Pxz6hJkC4THU4kTotAstCUZ25og/viewform?usp=header" 
@@ -252,7 +252,7 @@ const HomePage = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
-                <LinkIcon className="mr-2 h-5 w-5" />
+                <LinkIcon className="mr-2 h-4 w-4" />
                 How Can We Help You?
               </a>
             </Button>
