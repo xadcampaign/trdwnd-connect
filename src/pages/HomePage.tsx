@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -32,7 +31,7 @@ const HomePage = () => {
 
       <Section 
         title="Who We Are" 
-        subtitle="EUROGROWTH is a premier connector for Canadian companies seeking to expand their market reach through strategic partnerships in the European Union."
+        subtitle="EuroGrowth is a premier connector for Canadian companies seeking to expand their market reach through strategic partnerships in the European Union."
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
