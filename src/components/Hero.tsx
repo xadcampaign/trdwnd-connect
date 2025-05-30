@@ -20,7 +20,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <div
-      className={`relative w-full ${height} min-h-[400px] flex items-center pt-20 md:pt-24`}
+      className={`relative w-full ${height} min-h-[500px] flex items-center pt-28 md:pt-32`}
     >
       {/* Background Image */}
       <div
@@ -35,12 +35,12 @@ const Hero = ({
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-3xl text-center md:text-left">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 animate-fade-in drop-shadow-lg">
+        <div className="max-w-4xl text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg leading-tight">
             {title}
           </h1>
           {subtitle && (
-            <div className="text-2xl md:text-3xl text-white mb-10 animate-slide-up drop-shadow-md bg-black/30 p-4 rounded-lg backdrop-blur-sm">
+            <div className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-slide-up drop-shadow-md bg-black/30 p-4 rounded-lg backdrop-blur-sm">
               {subtitle}
             </div>
           )}
