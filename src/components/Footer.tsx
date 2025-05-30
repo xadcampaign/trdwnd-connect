@@ -24,7 +24,7 @@ const Footer = () => {
                 <span className="sr-only">Eric Dauchy LinkedIn Profile</span>
               </a>
               <a
-                href="mailto:Eric.Dauchy@EuroGrowth.ca"
+                href="mailto:Eric.dauchy@eurogrowth.ca"
                 className="text-gray-300 hover:text-trdwnd-gold transition-colors"
                 aria-label="Eric Dauchy Email"
               >
@@ -125,8 +125,8 @@ const Footer = () => {
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Eric Dauchy</p>
-                  <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                    Eric.Dauchy@EuroGrowth.ca
+                  <a href="mailto:Eric.dauchy@eurogrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    Eric.dauchy@eurogrowth.ca
                   </a>
                 </div>
               </li>
@@ -134,8 +134,8 @@ const Footer = () => {
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Eric Gerritsen</p>
-                  <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                    Eric.Gerritsen@EuroGrowth.ca
+                  <a href="mailto:eric@impetialyellowventures.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    eric@impetialyellowventures.com
                   </a>
                 </div>
               </li>
