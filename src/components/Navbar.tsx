@@ -40,7 +40,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md py-2 shadow-md"
-          : "bg-transparent py-4"
+          : "bg-black/40 backdrop-blur-lg py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -52,8 +52,8 @@ const Navbar = () => {
               to={link.path}
               className={`hover-underline text-lg font-medium transition-colors ${
                 location.pathname === link.path
-                  ? "text-trdwnd-navy"
-                  : "text-gray-600 hover:text-trdwnd-navy"
+                  ? scrolled ? "text-trdwnd-navy" : "text-white"
+                  : scrolled ? "text-gray-600 hover:text-trdwnd-navy" : "text-white/90 hover:text-white"
               }`}
             >
               {link.name}
@@ -70,9 +70,9 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X className="h-8 w-8 text-trdwnd-navy" />
+            <X className={`h-8 w-8 ${scrolled ? "text-trdwnd-navy" : "text-white"}`} />
           ) : (
-            <Menu className="h-8 w-8 text-trdwnd-navy" />
+            <Menu className={`h-8 w-8 ${scrolled ? "text-trdwnd-navy" : "text-white"}`} />
           )}
         </button>
       </div>
