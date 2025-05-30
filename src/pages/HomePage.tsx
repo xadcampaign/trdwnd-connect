@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -15,7 +16,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero
-        title="Expanding Canadian Export Markets Through Elite EU Partnerships"
+        title="The time for Canadian business to diversify markets to Europe is now"
         subtitle={<span>We connect <span className="text-[#ea384c]">Canadian companies</span> with high-quality partners in the European Union to maximize market potential and drive international growth.</span>}
         image="/lovable-uploads/192ae08f-974b-4254-a059-f245c321a59a.png"
       >
