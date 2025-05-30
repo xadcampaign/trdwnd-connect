@@ -36,11 +36,11 @@ const Hero = ({
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg leading-tight bg-white/10 p-4 rounded-lg backdrop-blur-sm">
             {title}
           </h1>
           {subtitle && (
-            <div className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-slide-up drop-shadow-md bg-black/30 p-4 rounded-lg backdrop-blur-sm">
+            <div className="text-lg md:text-xl lg:text-2xl text-white mb-8 animate-slide-up drop-shadow-md bg-white/10 p-4 rounded-lg backdrop-blur-sm">
               {subtitle}
             </div>
           )}
