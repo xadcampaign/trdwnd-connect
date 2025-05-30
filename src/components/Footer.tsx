@@ -24,14 +24,12 @@ const Footer = () => {
                 <span className="sr-only">Eric Dauchy LinkedIn Profile</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/eric-j-gerritsen-6b9117/"
+                href="mailto:eric@impetialyellowventures.com"
                 className="text-gray-300 hover:text-trdwnd-gold transition-colors"
-                aria-label="Eric Gerritsen LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
+                aria-label="Eric Gerritsen Email"
               >
-                <Linkedin size={20} />
-                <span className="sr-only">Eric Gerritsen LinkedIn Profile</span>
+                <Mail size={20} />
+                <span className="sr-only">Eric Gerritsen Email</span>
               </a>
             </div>
           </div>
@@ -136,7 +134,7 @@ const Footer = () => {
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Eric Gerritsen</p>
-                  <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                  <a href="mailto:eric@impetialyellowventures.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
                     Contact
                   </a>
                 </div>
