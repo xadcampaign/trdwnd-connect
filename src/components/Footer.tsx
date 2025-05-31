@@ -134,8 +134,8 @@ const Footer = () => {
                 <Mail size={20} className="text-trdwnd-gold mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Eric Gerritsen</p>
-                  <a href="mailto:eric@impetialyellowventures.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
-                    eric@impetialyellowventures.com
+                  <a href="mailto:Eric@imperialyellowventures.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    Eric@imperialyellowventures.com
                   </a>
                 </div>
               </li>
