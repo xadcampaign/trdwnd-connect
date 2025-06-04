@@ -16,9 +16,9 @@ const ContactPage = () => {
 
       <Section className="py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-bold text-trdwnd-navy mb-6">Send Us a Message</h2>
-            <p className="text-gray-600 mb-8">
+          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 sm:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-trdwnd-navy mb-6">Send Us a Message</h2>
+            <p className="text-gray-600 mb-8 text-base sm:text-lg">
               Complete the form below and one of our international business specialists will get back to you within 24 hours.
             </p>
             
@@ -27,9 +27,9 @@ const ContactPage = () => {
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex items-center gap-3 mb-4">
                 <Link className="h-6 w-6 text-trdwnd-gold" />
-                <h3 className="text-xl font-semibold text-trdwnd-navy">Prefer to use Google Forms?</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-trdwnd-navy">Prefer to use Google Forms?</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-base sm:text-lg">
                 We also offer a Google Forms option for contacting us. Fill out our detailed questionnaire to help us better understand your specific needs.
               </p>
               <Button 
@@ -51,14 +51,14 @@ const ContactPage = () => {
           </div>
           
           <div>
-            <div className="bg-trdwnd-navy text-white rounded-lg shadow-md p-8 mb-8">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+            <div className="bg-trdwnd-navy text-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold mb-6">Contact Information</h3>
               <ul className="space-y-6">
                 <li className="flex items-start">
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Eric Dauchy</p>
-                    <a href="mailto:Eric.dauchy@eurogrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion Inquiry" className="text-gray-300 hover:text-trdwnd-gold transition-colors text-sm sm:text-base">
                       Eric.dauchy@eurogrowth.ca
                     </a>
                   </div>
@@ -68,7 +68,7 @@ const ContactPage = () => {
                   <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Eric Gerritsen</p>
-                    <a href="mailto:Eric@imperialyellowventures.com" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                    <a href="mailto:Eric@imperialyellowventures.com?subject=European Market Expansion Inquiry" className="text-gray-300 hover:text-trdwnd-gold transition-colors text-sm sm:text-base">
                       Eric@imperialyellowventures.com
                     </a>
                   </div>
@@ -107,8 +107,8 @@ const ContactPage = () => {
               </ul>
             </div>
             
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-xl font-semibold text-trdwnd-navy mb-4">European Office</h3>
+            <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-semibold text-trdwnd-navy mb-4">European Office</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
@@ -135,8 +135,8 @@ const ContactPage = () => {
 
       <Section bg="light" className="py-16">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-2xl font-bold text-trdwnd-navy mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-600">
+          <h2 className="text-xl sm:text-2xl font-bold text-trdwnd-navy mb-4">Frequently Asked Questions</h2>
+          <p className="text-gray-600 text-base sm:text-lg">
             Find answers to common questions about our services and approach to international business development.
           </p>
         </div>
@@ -164,8 +164,8 @@ const ContactPage = () => {
               <div className="flex items-start">
                 <MessageSquare className="h-5 w-5 text-trdwnd-gold mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-trdwnd-navy mb-2">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <h3 className="font-semibold text-trdwnd-navy mb-2 text-base sm:text-lg">{faq.question}</h3>
+                  <p className="text-gray-600 text-sm sm:text-base">{faq.answer}</p>
                 </div>
               </div>
             </div>

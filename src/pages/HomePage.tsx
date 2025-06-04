@@ -6,7 +6,8 @@ import {
   TrendingUp, 
   Users,
   ChevronRight,
-  Link as LinkIcon
+  Link as LinkIcon,
+  Mail
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -23,8 +24,11 @@ const HomePage = () => {
           <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
             <Link to="/services">Our Services</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
-            <Link to="/get-started">Contact Us</Link>
+          <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20">
+            <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion Inquiry" className="inline-flex items-center">
+              <Mail className="mr-2 h-4 w-4" />
+              Contact Us
+            </a>
           </Button>
         </div>
       </Hero>
@@ -220,15 +224,18 @@ const HomePage = () => {
         className="py-20 md:py-28"
       >
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Expand Your Business into Europe?</h2>
-          <p className="text-gray-300 text-xl mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Ready to Expand Your Business into Europe?</h2>
+          <p className="text-gray-300 text-lg sm:text-xl mb-8">
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium">
-              <Link to="/get-started">Get Started</Link>
+              <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion - Get Started" className="inline-flex items-center">
+                <Mail className="mr-2 h-4 w-4" />
+                Get Started
+              </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10">
+            <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20">
               <Link to="/services">Learn More</Link>
             </Button>
           </div>
