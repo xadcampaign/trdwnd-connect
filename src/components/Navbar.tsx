@@ -44,10 +44,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo/Brand space - left side (empty for now) */}
-        <div className="flex-1"></div>
+        {/* Logo - Big on the left side */}
+        <div className="flex items-center">
+          <Link to="/" className="text-3xl font-bold text-trdwnd-navy hover:text-trdwnd-darkblue transition-colors">
+            EUROGROWTH
+          </Link>
+        </div>
 
-        {/* Desktop Navigation - Now on the right side */}
+        {/* Desktop Navigation - On the right side */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
