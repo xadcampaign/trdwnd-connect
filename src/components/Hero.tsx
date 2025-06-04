@@ -20,7 +20,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <div
-      className={`relative w-full ${height} min-h-[500px] flex items-center pt-28 md:pt-32`}
+      className={`relative w-full ${height} min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex items-center pt-20 sm:pt-24 md:pt-28 lg:pt-32`}
     >
       {/* Background Image */}
       <div
@@ -34,13 +34,13 @@ const Hero = ({
       )}
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl text-center md:text-left">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg leading-tight bg-white/25 backdrop-blur-md p-4 sm:p-6 rounded-lg border border-white/20">
+      <div className="container relative z-10 mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
+        <div className="max-w-4xl text-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fade-in drop-shadow-lg leading-tight bg-white/30 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-lg border border-white/20">
             {title}
           </h1>
           {subtitle && (
-            <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 animate-slide-up drop-shadow-md bg-white/25 backdrop-blur-md p-4 sm:p-6 rounded-lg border border-white/20">
+            <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mb-6 sm:mb-8 animate-slide-up drop-shadow-md bg-white/30 backdrop-blur-md p-3 sm:p-4 md:p-6 rounded-lg border border-white/20">
               {subtitle}
             </div>
           )}
