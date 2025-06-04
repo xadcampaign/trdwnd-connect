@@ -98,26 +98,22 @@ const HomePage = () => {
             {
               icon: <Globe className="h-8 w-8 sm:h-10 sm:w-10 text-trdwnd-navy" />,
               title: "EU Market Analysis",
-              description: "In-depth research and analysis of European markets to identify opportunities and entry strategies.",
-              link: "/eu-market-analysis"
+              description: "In-depth research and analysis of European markets to identify opportunities and entry strategies."
             },
             {
               icon: <Handshake className="h-8 w-8 sm:h-10 sm:w-10 text-trdwnd-navy" />,
               title: "Distribution Deals",
-              description: "Connect with established distributors to get your products into European retail networks.",
-              link: "/distribution-deals"
+              description: "Connect with established distributors to get your products into European retail networks."
             },
             {
               icon: <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 text-trdwnd-navy" />,
               title: "Tech Licensing",
-              description: "Navigate complex licensing agreements to monetize your technology across European markets.",
-              link: "/tech-licensing"
+              description: "Navigate complex licensing agreements to monetize your technology across European markets."
             },
             {
               icon: <Users className="h-8 w-8 sm:h-10 sm:w-10 text-trdwnd-navy" />,
               title: "Joint Ventures",
-              description: "Form strategic partnerships with European businesses to share resources and market knowledge.",
-              link: "/joint-ventures"
+              description: "Form strategic partnerships with European businesses to share resources and market knowledge."
             }
           ].map((service, index) => (
             <div 
@@ -128,7 +124,7 @@ const HomePage = () => {
               <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-trdwnd-navy">{service.title}</h3>
               <p className="text-gray-600 mb-4 sm:mb-5 flex-grow text-sm sm:text-base">{service.description}</p>
               <Link 
-                to={service.link} 
+                to="/services" 
                 className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center mt-auto group touch-manipulation text-sm sm:text-base"
               >
                 Learn more
@@ -159,7 +155,7 @@ const HomePage = () => {
               <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">High-Tech & AI</h3>
               <p className="text-gray-200 mb-3 sm:mb-4 text-sm sm:text-base">Connecting innovative Canadian technology companies with European implementation partners and customers.</p>
               <Link 
-                to="/industries#tech" 
+                to="/industries" 
                 className="text-trdwnd-gold hover:text-trdwnd-gold/80 font-medium inline-flex items-center group touch-manipulation text-sm sm:text-base"
               >
                 Explore opportunities
@@ -178,7 +174,7 @@ const HomePage = () => {
               <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">Aerospace & Defense</h3>
               <p className="text-gray-200 mb-3 sm:mb-4 text-sm sm:text-base">Facilitating strategic partnerships between Canadian aerospace firms and European defense contractors.</p>
               <Link 
-                to="/industries#aerospace" 
+                to="/industries" 
                 className="text-trdwnd-gold hover:text-trdwnd-gold/80 font-medium inline-flex items-center group touch-manipulation text-sm sm:text-base"
               >
                 Explore opportunities
