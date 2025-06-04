@@ -21,7 +21,7 @@ const HomePage = () => {
         subtitle={<span>We connect <span className="text-[#ea384c]">Canadian companies</span> with high-quality partners in the European Union to maximize market potential and drive international growth.</span>}
         image="/lovable-uploads/192ae08f-974b-4254-a059-f245c321a59a.png"
       >
-        <div className="flex flex-col gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center">
           <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
             <Link to="/services">Our Services</Link>
           </Button>
@@ -203,7 +203,7 @@ const HomePage = () => {
           <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8">
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
-          <div className="flex flex-col gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
               <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion - Get Started" className="inline-flex items-center justify-center">
                 <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
