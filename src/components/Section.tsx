@@ -27,7 +27,7 @@ const Section = ({
   return (
     <section
       id={id}
-      className={`py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 ${bgClasses[bg]} ${className} relative`}
+      className={`py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 ${bgClasses[bg]} ${className} relative`}
     >
       {/* Flag icon - responsive positioning */}
       <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 opacity-70 flex flex-col items-center gap-1">
@@ -38,7 +38,7 @@ const Section = ({
         />
       </div>
 
-      {/* EUROGROWTH logo - responsive sizing */}
+      {/* EUROGROWTH logo - responsive positioning */}
       <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 opacity-80">
         <img 
           src="/lovable-uploads/b6db057a-109c-4d30-8766-909c77dffe5d.png" 
@@ -49,7 +49,7 @@ const Section = ({
       
       <div className="container mx-auto px-3 sm:px-4">
         {(title || subtitle) && (
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 mt-12 sm:mt-8 md:mt-6 lg:mt-4">
             {title && (
               <h2
                 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4 sm:mb-6 ${
