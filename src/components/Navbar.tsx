@@ -46,8 +46,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo - Big on the left side */}
         <div className="flex items-center">
-          <Link to="/" className="text-3xl font-bold text-trdwnd-navy hover:text-trdwnd-darkblue transition-colors">
-            EUROGROWTH
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="/lovable-uploads/afa2013c-40eb-49e6-832d-a996da7a37c5.png" 
+              alt="EuroGrowth" 
+              className="h-12 w-auto"
+            />
           </Link>
         </div>
 
