@@ -22,7 +22,7 @@ const HomePage = () => {
       >
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center">
           <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
-            <Link to="/services">Our Services</Link>
+            <Link to="/get-started">Get Started</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
             <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion Inquiry" className="inline-flex items-center justify-center">
@@ -199,13 +199,11 @@ const HomePage = () => {
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <a 
-              href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion - Get Started"
-              className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation rounded-md inline-flex items-center justify-center transition-colors"
-            >
-              <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Get Started
-            </a>
+            <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
+              <Link to="/get-started">
+                Get Started
+              </Link>
+            </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
               <Link to="/services">Learn More</Link>
             </Button>
