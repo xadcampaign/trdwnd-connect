@@ -50,7 +50,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/4045def3-70c1-4b43-b2f8-280f3b19b716.png" 
               alt="EuroGrowth" 
-              className="h-36 w-auto"
+              className="h-24 w-auto"
             />
           </Link>
         </div>
