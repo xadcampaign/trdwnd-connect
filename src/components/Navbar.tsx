@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="/lovable-uploads/afa2013c-40eb-49e6-832d-a996da7a37c5.png" 
+              src="/lovable-uploads/4045def3-70c1-4b43-b2f8-280f3b19b716.png" 
               alt="EuroGrowth" 
               className="h-36 w-auto"
             />
