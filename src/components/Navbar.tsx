@@ -44,7 +44,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Desktop Navigation - Now on the left side */}
+        {/* Logo/Brand space - left side (empty for now) */}
+        <div className="flex-1"></div>
+
+        {/* Desktop Navigation - Now on the right side */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -64,9 +67,9 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation Toggle */}
+        {/* Mobile Navigation Toggle - positioned on the right */}
         <button
-          className="md:hidden p-2 focus:outline-none"
+          className="md:hidden p-2 focus:outline-none ml-auto"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
