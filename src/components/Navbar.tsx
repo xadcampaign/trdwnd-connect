@@ -71,7 +71,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-sm xl:text-base 2xl:text-lg px-3 xl:px-4 2xl:px-6 py-2 xl:py-3">
-            <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion Inquiry">Get Started</a>
+            <Link to="/get-started">Get Started</Link>
           </Button>
         </div>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-base sm:text-lg py-3 sm:py-4 touch-manipulation">
-              <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion Inquiry">Get Started</a>
+              <Link to="/get-started">Get Started</Link>
             </Button>
           </div>
         </div>
