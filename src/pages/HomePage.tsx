@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -200,12 +199,13 @@ const HomePage = () => {
             Contact our team today to discuss how we can help you unlock new growth opportunities in European markets.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
-              <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion - Get Started" className="inline-flex items-center justify-center">
-                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                Get Started
-              </a>
-            </Button>
+            <a 
+              href="mailto:Eric.dauchy@eurogrowth.ca?subject=European Market Expansion - Get Started"
+              className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation rounded-md inline-flex items-center justify-center transition-colors"
+            >
+              <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              Get Started
+            </a>
             <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
               <Link to="/services">Learn More</Link>
             </Button>
