@@ -1,197 +1,179 @@
 
-import { Button } from "@/components/ui/button";
-import { 
-  CheckCircle,
-  Clock,
-  Users,
-  Globe,
-  ArrowRight,
-  Mail,
-  Phone,
-  Calendar
-} from "lucide-react";
+import { useState } from "react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, MessageSquare, Clock, Link } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import ContactForm from "@/components/ContactForm";
 
 const GetStartedPageFr = () => {
+  const { toast } = useToast();
+
   return (
     <main>
       <Hero
-        title="Commencez Votre Expansion Européenne"
-        subtitle="Prenez le premier pas vers une croissance internationale réussie. Notre équipe d'experts vous guidera à chaque étape du processus."
-        image="/lovable-uploads/1a9c0d1b-f8d3-4b1a-a72d-8d15e3e9765d.png"
+        title="Commencer"
+        subtitle="Commencez votre parcours d'expansion vers les marchés européens avec les conseils d'experts d'EUROGROWTH"
+        image="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        height="lg:h-[60vh]"
       />
 
-      <Section 
-        title="Comment Nous Pouvons Vous Aider" 
-        subtitle="Un processus structuré pour maximiser vos chances de succès sur les marchés européens."
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {[
-            {
-              icon: <Globe className="h-10 w-10 text-trdwnd-navy" />,
-              title: "Évaluation Gratuite",
-              description: "Analyse complète de votre potentiel d'expansion européenne et identification des meilleures opportunités.",
-              duration: "30-45 minutes",
-              included: [
-                "Analyse de marché préliminaire",
-                "Évaluation du potentiel",
-                "Recommandations stratégiques",
-                "Plan d'action personnalisé"
-              ]
-            },
-            {
-              icon: <Users className="h-10 w-10 text-trdwnd-navy" />,
-              title: "Stratégie Sur Mesure",
-              description: "Développement d'une stratégie personnalisée basée sur vos objectifs spécifiques et votre secteur d'activité.",
-              duration: "2-3 semaines",
-              included: [
-                "Recherche de marché approfondie",
-                "Identification des partenaires potentiels",
-                "Stratégie d'approche",
-                "Timeline détaillée"
-              ]
-            },
-            {
-              icon: <CheckCircle className="h-10 w-10 text-trdwnd-navy" />,
-              title: "Exécution & Support",
-              description: "Mise en œuvre de votre stratégie avec accompagnement continu jusqu'à la finalisation des partenariats.",
-              duration: "3-6 mois",
-              included: [
-                "Présentation aux partenaires",
-                "Négociation assistée",
-                "Support juridique",
-                "Suivi post-accord"
-              ]
-            }
-          ].map((step, index) => (
-            <div key={index} className="bg-white p-6 sm:p-8 rounded-lg shadow-lg border border-gray-100">
-              <div className="flex items-center gap-4 mb-4">
-                {step.icon}
-                <div className="text-sm bg-trdwnd-lightblue text-trdwnd-navy px-3 py-1 rounded-full font-medium">
-                  Étape {index + 1}
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-trdwnd-navy mb-3">{step.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm sm:text-base">{step.description}</p>
-              <div className="flex items-center gap-2 mb-4 text-trdwnd-gold">
-                <Clock className="h-4 w-4" />
-                <span className="text-sm font-medium">{step.duration}</span>
-              </div>
-              <div className="space-y-2">
-                {step.included.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-trdwnd-gold flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <Section className="py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-bold text-trdwnd-navy mb-6">Envoyez-nous un Message</h2>
+            <p className="text-gray-600 mb-8">
+              Remplissez le formulaire ci-dessous et un de nos spécialistes en affaires internationales vous répondra dans les 24 heures.
+            </p>
+            
+            <ContactForm />
 
-      <Section 
-        title="Options de Contact" 
-        subtitle="Choisissez la méthode qui vous convient le mieux pour commencer votre parcours d'expansion."
-        bg="light"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <Mail className="h-8 w-8 text-trdwnd-navy mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-trdwnd-navy mb-3">Email Direct</h3>
-            <p className="text-gray-600 text-sm mb-4">Contactez-nous directement pour une réponse rapide à vos questions.</p>
-            <Button asChild className="w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue">
-              <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=Demande d'expansion européenne">
-                Envoyer un Email
-              </a>
-            </Button>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <Phone className="h-8 w-8 text-trdwnd-navy mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-trdwnd-navy mb-3">Appel Téléphonique</h3>
-            <p className="text-gray-600 text-sm mb-4">Discutez directement avec notre équipe pour une consultation immédiate.</p>
-            <Button asChild className="w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue">
-              <a href="tel:+32498513077">
-                Appeler Maintenant
-              </a>
-            </Button>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <Calendar className="h-8 w-8 text-trdwnd-navy mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-trdwnd-navy mb-3">Questionnaire Détaillé</h3>
-            <p className="text-gray-600 text-sm mb-4">Remplissez notre formulaire pour une analyse personnalisée approfondie.</p>
-            <Button asChild className="w-full bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy">
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf6ef8G0TUE0oHvUmD3Ik7Pxz6hJkC4THU4kTotAstCUZ25og/viewform?usp=header" 
-                target="_blank" 
-                rel="noopener noreferrer"
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="flex items-center gap-3 mb-4">
+                <Link className="h-6 w-6 text-trdwnd-gold" />
+                <h3 className="text-xl font-semibold text-trdwnd-navy">Motif de Contact</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Pour une approche plus structurée, veuillez remplir notre questionnaire Google Forms. Cela nous aide à recueillir des informations complètes sur votre entreprise et vos objectifs d'expansion.
+              </p>
+              <Button 
+                asChild
+                className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium"
               >
-                Remplir le Formulaire
-              </a>
-            </Button>
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf6ef8G0TUE0oHvUmD3Ik7Pxz6hJkC4THU4kTotAstCUZ25og/viewform?usp=header" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                >
+                  <Link className="mr-2 h-4 w-4" />
+                  Comment Pouvons-Nous Vous Aider?
+                </a>
+              </Button>
+            </div>
+          </div>
+          
+          <div>
+            <div className="bg-trdwnd-navy text-white rounded-lg shadow-md p-8 mb-8">
+              <h3 className="text-xl font-semibold mb-6">Informations de Contact</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Eric Dauchy</p>
+                    <a href="mailto:Eric.Dauchy@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Contact
+                    </a>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <Mail className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Eric Gerritsen</p>
+                    <a href="mailto:Eric.Gerritsen@EuroGrowth.ca" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      Contact
+                    </a>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <Phone className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Téléphone</p>
+                    <a href="tel:+32498513077" className="text-gray-300 hover:text-trdwnd-gold transition-colors">
+                      +32 498 51 30 77
+                    </a>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <MapPin className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Bureaux</p>
+                    <address className="text-gray-300 not-italic">
+                      Bureaux à Toronto, Vancouver, Bruxelles, Londres et Hong Kong
+                    </address>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <Clock className="h-6 w-6 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Heures d'Ouverture</p>
+                    <p className="text-gray-300">
+                      Lundi - Vendredi<br />
+                      9h00 - 17h00 EST
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h3 className="text-xl font-semibold text-trdwnd-navy mb-4">Bureau Européen</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <MapPin className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <address className="text-gray-600 not-italic">
+                      Bureaux à Bruxelles, Londres et Hong Kong
+                    </address>
+                  </div>
+                </li>
+                
+                <li className="flex items-start">
+                  <Phone className="h-5 w-5 text-trdwnd-gold mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <a href="tel:+32498513077" className="text-gray-600 hover:text-trdwnd-navy transition-colors">
+                      +32 498 51 30 77
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </Section>
 
-      <Section 
-        title="Questions Fréquentes" 
-        subtitle="Réponses aux questions les plus courantes sur notre processus d'expansion européenne."
-        bg="white"
-      >
-        <div className="max-w-3xl mx-auto space-y-6">
+      <Section bg="light" className="py-16">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-2xl font-bold text-trdwnd-navy mb-4">Foire Aux Questions</h2>
+          <p className="text-gray-600">
+            Trouvez des réponses aux questions courantes sur nos services et notre approche du développement des affaires internationales.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              question: "Combien de temps prend le processus complet?",
-              answer: "Le processus varie selon la complexité et le type de partenariat recherché. En moyenne, de l'évaluation initiale à la signature d'un accord, comptez entre 4 à 8 mois. Nous travaillons pour accélérer ce processus autant que possible."
+              question: "Combien de temps faut-il généralement pour établir un partenariat européen?",
+              answer: "La chronologie varie selon l'industrie et les exigences spécifiques, mais la plupart des partenariats prennent entre 3 et 6 mois à établir. Notre approche structurée aide à rationaliser ce processus autant que possible."
             },
             {
-              question: "Quels sont vos honoraires?",
-              answer: "Nos honoraires sont basés sur le succès - nous ne sommes payés que lorsque vous réussissez. L'évaluation initiale est gratuite, et nous discutons de notre structure tarifaire transparente lors de notre première consultation."
+              question: "Travaillez-vous avec des entreprises de toutes tailles?",
+              answer: "Nous travaillons avec des entreprises canadiennes ayant un chiffre d'affaires de 50 à 500 millions CAD. Nos services sont adaptés pour répondre aux besoins et ressources spécifiques de chaque client."
             },
             {
-              question: "Dans quels pays européens travaillez-vous?",
-              answer: "Nous avons des contacts établis dans tous les pays de l'UE, avec une expertise particulière en Allemagne, France, Pays-Bas, Belgique, et dans les pays nordiques. Notre réseau s'étend également aux marchés émergents d'Europe de l'Est."
+              question: "Dans quels pays européens opérez-vous?",
+              answer: "Nous fournissons des résultats dans toute l'Union européenne, le Royaume-Uni et Israël."
             },
             {
-              question: "Que se passe-t-il si aucun partenariat ne se concrétise?",
-              answer: "Notre approche basée sur le succès signifie que vous ne payez que pour les résultats obtenus. Si aucun partenariat ne se concrétise malgré nos efforts, vous ne nous devez rien au-delà des frais convenus initialement."
+              question: "Quels sont vos honoraires et votre structure tarifaire?",
+              answer: "Nous offrons des modèles d'engagement flexibles incluant des honoraires basés sur les projets, des acomptes et une rémunération basée sur le succès. Nous travaillerons avec vous pour déterminer la structure la plus appropriée selon vos besoins et objectifs spécifiques."
             }
           ].map((faq, index) => (
-            <div key={index} className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-trdwnd-navy mb-3">{faq.question}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">{faq.answer}</p>
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex items-start">
+                <MessageSquare className="h-5 w-5 text-trdwnd-gold mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-trdwnd-navy mb-2">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              </div>
             </div>
           ))}
-        </div>
-      </Section>
-
-      <Section 
-        title="Prêt à Commencer?" 
-        subtitle="Remplissez notre formulaire détaillé ci-dessous pour une évaluation personnalisée de votre potentiel d'expansion européenne."
-        bg="light"
-      >
-        <ContactForm className="max-w-4xl mx-auto" />
-      </Section>
-
-      <Section 
-        bg="dark"
-        className="py-12 sm:py-16"
-      >
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Votre Succès Européen Commence Aujourd'hui</h2>
-          <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8">
-            Rejoignez les nombreuses entreprises canadiennes qui ont déjà réussi leur expansion européenne avec notre aide. Le moment idéal pour commencer, c'est maintenant.
-          </p>
-          <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium px-8 py-4 text-lg">
-            <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=Prêt à commencer l'expansion européenne" className="inline-flex items-center">
-              Commencer Maintenant
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
         </div>
       </Section>
     </main>
