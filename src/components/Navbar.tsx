@@ -1,12 +1,18 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Flag } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("en");
   const location = useLocation();
 
   const navLinks = [
@@ -14,6 +20,11 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Industries", path: "/industries" },
+  ];
+
+  const languages = [
+    { code: "en", name: "English", flag: "🇨🇦" },
+    { code: "fr", name: "Français", flag: "🇫🇷" },
   ];
 
   useEffect(() => {
@@ -34,6 +45,12 @@ const Navbar = () => {
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
+
+  const handleLanguageChange = (languageCode: string) => {
+    setCurrentLanguage(languageCode);
+    console.log(`Language switched to: ${languageCode}`);
+    // TODO: Implement actual language switching logic
+  };
 
   return (
     <nav
@@ -70,22 +87,72 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          
+          {/* Language Switcher */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Flag className="h-4 w-4" />
+                <span className="text-lg">
+                  {languages.find(lang => lang.code === currentLanguage)?.flag}
+                </span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="bg-white shadow-lg border">
+              {languages.map((language) => (
+                <DropdownMenuItem
+                  key={language.code}
+                  onClick={() => handleLanguageChange(language.code)}
+                  className="flex items-center gap-3 cursor-pointer hover:bg-gray-50"
+                >
+                  <span className="text-lg">{language.flag}</span>
+                  <span className="font-medium">{language.name}</span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
           <Button asChild className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-sm xl:text-base 2xl:text-lg px-3 xl:px-4 2xl:px-6 py-2 xl:py-3">
             <Link to="/get-started">Get Started</Link>
           </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <button
-          className="lg:hidden p-2 focus:outline-none ml-auto touch-manipulation"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? (
-            <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-trdwnd-navy" />
-          ) : (
-            <Menu className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-trdwnd-navy" />
-          )}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          {/* Mobile Language Switcher */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="flex items-center gap-1 px-2">
+                <span className="text-sm">
+                  {languages.find(lang => lang.code === currentLanguage)?.flag}
+                </span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="bg-white shadow-lg border">
+              {languages.map((language) => (
+                <DropdownMenuItem
+                  key={language.code}
+                  onClick={() => handleLanguageChange(language.code)}
+                  className="flex items-center gap-2 cursor-pointer hover:bg-gray-50"
+                >
+                  <span>{language.flag}</span>
+                  <span className="text-sm">{language.name}</span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
+          <button
+            className="p-2 focus:outline-none touch-manipulation"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-trdwnd-navy" />
+            ) : (
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-trdwnd-navy" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}
