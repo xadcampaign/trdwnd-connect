@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -17,7 +16,7 @@ const IndustriesPageFr = () => {
       <Hero
         title="Industries que Nous Servons"
         subtitle="Nous nous spécialisons dans la connexion d'entreprises canadiennes avec des partenaires européens dans des secteurs à forte valeur ajoutée et à fort potentiel de croissance."
-        image="/lovable-uploads/8e0b7229-b916-442c-83b2-884b8c9062f1.png"
+        image="/lovable-uploads/b063649b-d09d-4cbb-8610-7a06b6953065.png"
       />
 
       <Section 
