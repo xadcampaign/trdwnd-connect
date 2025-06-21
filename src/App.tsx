@@ -23,6 +23,7 @@ import AboutPageFr from "./pages/fr/AboutPageFr";
 import ServicesPageFr from "./pages/fr/ServicesPageFr";
 import IndustriesPageFr from "./pages/fr/IndustriesPageFr";
 import GetStartedPageFr from "./pages/fr/GetStartedPageFr";
+import ContactPageFr from "./pages/fr/ContactPageFr";
 import EUMarketAnalysisPageFr from "./pages/fr/EUMarketAnalysisPageFr";
 import DistributionDealsPageFr from "./pages/fr/DistributionDealsPageFr";
 import TechLicensingPageFr from "./pages/fr/TechLicensingPageFr";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/fr/services" element={<ServicesPageFr />} />
           <Route path="/fr/industries" element={<IndustriesPageFr />} />
           <Route path="/fr/commencer" element={<GetStartedPageFr />} />
+          <Route path="/fr/contact" element={<ContactPageFr />} />
           <Route path="/fr/analyse-marche-ue" element={<EUMarketAnalysisPageFr />} />
           <Route path="/fr/accords-distribution" element={<DistributionDealsPageFr />} />
           <Route path="/fr/licences-technologie" element={<TechLicensingPageFr />} />

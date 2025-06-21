@@ -26,10 +26,10 @@ const HomePageFr = () => {
             <Link to="/fr/commencer">Commencer</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation">
-            <a href="mailto:Eric.dauchy@eurogrowth.ca?subject=Demande d'expansion du marché européen" className="inline-flex items-center justify-center">
+            <Link to="/fr/contact" className="inline-flex items-center justify-center">
               <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Nous Contacter
-            </a>
+            </Link>
           </Button>
         </div>
       </Hero>
