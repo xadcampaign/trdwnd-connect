@@ -19,7 +19,7 @@ const ServicesPageFr = () => {
       <Hero
         title="Solutions Complètes pour l'Expansion Européenne"
         subtitle="De l'analyse de marché aux partenariats stratégiques, nous offrons tous les services nécessaires pour réussir votre entrée sur les marchés européens."
-        image="/lovable-uploads/d2c017e4-584b-4175-b890-769544daff6a.png"
+        image="/lovable-uploads/9f2314f8-b675-4e0c-832a-d45ef45fb31f.png"
       />
 
       <Section 
