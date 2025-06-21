@@ -17,6 +17,17 @@ import DistributionDealsPage from "./pages/DistributionDealsPage";
 import TechLicensingPage from "./pages/TechLicensingPage";
 import JointVenturesPage from "./pages/JointVenturesPage";
 
+// French pages
+import HomePageFr from "./pages/fr/HomePageFr";
+import AboutPageFr from "./pages/fr/AboutPageFr";
+import ServicesPageFr from "./pages/fr/ServicesPageFr";
+import IndustriesPageFr from "./pages/fr/IndustriesPageFr";
+import GetStartedPageFr from "./pages/fr/GetStartedPageFr";
+import EUMarketAnalysisPageFr from "./pages/fr/EUMarketAnalysisPageFr";
+import DistributionDealsPageFr from "./pages/fr/DistributionDealsPageFr";
+import TechLicensingPageFr from "./pages/fr/TechLicensingPageFr";
+import JointVenturesPageFr from "./pages/fr/JointVenturesPageFr";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -27,6 +38,7 @@ const App = () => (
       <BrowserRouter>
         <Navbar />
         <Routes>
+          {/* English routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -36,6 +48,18 @@ const App = () => (
           <Route path="/distribution-deals" element={<DistributionDealsPage />} />
           <Route path="/tech-licensing" element={<TechLicensingPage />} />
           <Route path="/joint-ventures" element={<JointVenturesPage />} />
+          
+          {/* French routes */}
+          <Route path="/fr" element={<HomePageFr />} />
+          <Route path="/fr/a-propos" element={<AboutPageFr />} />
+          <Route path="/fr/services" element={<ServicesPageFr />} />
+          <Route path="/fr/industries" element={<IndustriesPageFr />} />
+          <Route path="/fr/commencer" element={<GetStartedPageFr />} />
+          <Route path="/fr/analyse-marche-ue" element={<EUMarketAnalysisPageFr />} />
+          <Route path="/fr/accords-distribution" element={<DistributionDealsPageFr />} />
+          <Route path="/fr/licences-technologie" element={<TechLicensingPageFr />} />
+          <Route path="/fr/coentreprises" element={<JointVenturesPageFr />} />
+          
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

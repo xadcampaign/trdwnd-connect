@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import {
@@ -13,10 +13,17 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("en");
   const location = useLocation();
+  const navigate = useNavigate();
+  
+  const isFrench = location.pathname.startsWith('/fr');
 
-  const navLinks = [
+  const navLinks = isFrench ? [
+    { name: "Accueil", path: "/fr" },
+    { name: "À Propos", path: "/fr/a-propos" },
+    { name: "Services", path: "/fr/services" },
+    { name: "Industries", path: "/fr/industries" },
+  ] : [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
@@ -24,8 +31,8 @@ const Navbar = () => {
   ];
 
   const languages = [
-    { code: "en", name: "English", flag: "🇨🇦" },
-    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "en", name: "English", flag: "🇨🇦", path: "/" },
+    { name: "Français", flag: "🇫🇷", path: "/fr" },
   ];
 
   useEffect(() => {
@@ -47,10 +54,8 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
-  const handleLanguageChange = (languageCode: string) => {
-    setCurrentLanguage(languageCode);
-    console.log(`Language switched to: ${languageCode}`);
-    // TODO: Implement actual language switching logic
+  const handleLanguageChange = (targetPath: string) => {
+    navigate(targetPath);
   };
 
   return (
@@ -64,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center">
         {/* Logo - Enhanced responsive sizing */}
         <div className="flex items-center">
-          <Link to="/" className="hover:opacity-80 transition-opacity">
+          <Link to={isFrench ? "/fr" : "/"} className="hover:opacity-80 transition-opacity">
             <img 
               src="/lovable-uploads/4045def3-70c1-4b43-b2f8-280f3b19b716.png" 
               alt="EuroGrowth" 
@@ -90,53 +95,47 @@ const Navbar = () => {
           ))}
           
           {/* Language Switcher */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-xl px-2 py-1">
-                {languages.find(lang => lang.code === currentLanguage)?.flag}
+          <div className="flex gap-2">
+            {languages.map((language) => (
+              <Button
+                key={language.flag}
+                onClick={() => handleLanguageChange(language.path)}
+                className={`text-xl px-2 py-1 ${
+                  (language.flag === "🇨🇦" && !isFrench) || (language.flag === "🇫🇷" && isFrench)
+                    ? "bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy"
+                    : "bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
+                }`}
+              >
+                {language.flag}
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-white shadow-lg border">
-              {languages.map((language) => (
-                <DropdownMenuItem
-                  key={language.code}
-                  onClick={() => handleLanguageChange(language.code)}
-                  className="flex items-center gap-3 cursor-pointer hover:bg-gray-50"
-                >
-                  <span className="text-lg">{language.flag}</span>
-                  <span className="font-medium">{language.name}</span>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+            ))}
+          </div>
           
           <Button asChild className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-sm xl:text-base 2xl:text-lg px-3 xl:px-4 2xl:px-6 py-2 xl:py-3">
-            <Link to="/get-started">Get Started</Link>
+            <Link to={isFrench ? "/fr/commencer" : "/get-started"}>
+              {isFrench ? "Commencer" : "Get Started"}
+            </Link>
           </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="lg:hidden flex items-center gap-2">
           {/* Mobile Language Switcher */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg px-2 py-1">
-                {languages.find(lang => lang.code === currentLanguage)?.flag}
+          <div className="flex gap-1">
+            {languages.map((language) => (
+              <Button
+                key={language.flag}
+                onClick={() => handleLanguageChange(language.path)}
+                className={`text-lg px-2 py-1 ${
+                  (language.flag === "🇨🇦" && !isFrench) || (language.flag === "🇫🇷" && isFrench)
+                    ? "bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy"
+                    : "bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
+                }`}
+              >
+                {language.flag}
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-white shadow-lg border">
-              {languages.map((language) => (
-                <DropdownMenuItem
-                  key={language.code}
-                  onClick={() => handleLanguageChange(language.code)}
-                  className="flex items-center gap-2 cursor-pointer hover:bg-gray-50"
-                >
-                  <span>{language.flag}</span>
-                  <span className="text-sm">{language.name}</span>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+            ))}
+          </div>
           
           <button
             className="p-2 focus:outline-none touch-manipulation"
@@ -169,7 +168,9 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="mt-2 w-full bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-base sm:text-lg py-3 sm:py-4 touch-manipulation">
-              <Link to="/get-started">Get Started</Link>
+              <Link to={isFrench ? "/fr/commencer" : "/get-started"}>
+                {isFrench ? "Commencer" : "Get Started"}
+              </Link>
             </Button>
           </div>
         </div>
