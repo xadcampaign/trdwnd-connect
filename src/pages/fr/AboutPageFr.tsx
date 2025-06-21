@@ -1,198 +1,227 @@
 
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { 
-  Globe, 
-  Users, 
-  TrendingUp, 
-  Award,
-  ChevronRight,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin
-} from "lucide-react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
+import { ExternalLink } from "lucide-react";
 
 const AboutPageFr = () => {
   return (
     <main>
       <Hero
-        title="Votre Passerelle vers l'Expansion Européenne"
-        subtitle="EuroGrowth connecte les entreprises canadiennes ambitieuses avec des partenaires européens stratégiques, ouvrant de nouveaux horizons de croissance et d'innovation."
-        image="/lovable-uploads/17dad340-be33-4a0f-b331-5283eb3fc722.png"
+        title="À propos d'EUROGROWTH"
+        subtitle="Votre partenaire de confiance pour l'expansion vers les marchés européens"
+        image="/lovable-uploads/01b447e6-649d-4a6d-b1fa-0abac25589bb.png"
+        height="lg:h-[70vh]"
       />
 
-      <Section 
-        title="Notre Mission" 
-        subtitle="Nous facilitons l'expansion internationale des entreprises canadiennes en créant des partenariats stratégiques durables avec l'Union européenne."
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      <Section title="Pourquoi nous choisir" subtitle="Créer des ponts entre l'innovation canadienne et les marchés européens">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
           <div>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-lg sm:text-xl leading-relaxed">
-              Chez EuroGrowth, nous croyons que l'avenir du commerce international repose sur des partenariats authentiques et mutuellement bénéfiques. Notre mission est de connecter les entreprises canadiennes innovantes avec les bonnes opportunités européennes.
+            <p className="text-gray-600 mb-6 text-xl">
+              Fondé en 2015, EUROGROWTH est né de la vision d'Eric Dauchy et Eric Gerritsen, deux experts en affaires internationales qui ont reconnu le potentiel inexploité des entreprises canadiennes sur les marchés européens.
             </p>
-            <p className="text-gray-600 mb-6 sm:mb-8 text-lg sm:text-xl leading-relaxed">
-              Nous nous spécialisons dans l'identification, l'évaluation et la facilitation de partenariats stratégiques qui créent de la valeur réelle pour toutes les parties impliquées.
+            <p className="text-gray-600 mb-6 text-xl">
+              Avec des bureaux à Bruxelles (UE) et Vancouver (Canada), notre équipe de direction offre une approche unique à double perspective pour le développement des affaires internationales.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-              <div className="flex items-center gap-3">
-                <Globe className="h-6 w-6 text-trdwnd-navy flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Portée Internationale</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Users className="h-6 w-6 text-trdwnd-navy flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Expertise Locale</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <TrendingUp className="h-6 w-6 text-trdwnd-navy flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Croissance Prouvée</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Award className="h-6 w-6 text-trdwnd-navy flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Excellence Reconnue</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img 
-              src="/lovable-uploads/80909d8f-6f03-46f7-a4dc-702d151474b4.png" 
-              alt="Équipe EuroGrowth" 
-              className="rounded-lg shadow-lg w-full"
-            />
-          </div>
-        </div>
-      </Section>
-
-      <Section 
-        title="Notre Équipe de Direction" 
-        subtitle="Dirigée par des experts reconnus en développement des affaires internationales avec des décennies d'expérience combinée."
-        bg="light"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
-          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg text-center">
-            <img 
-              src="/lovable-uploads/a7201968-6e87-4ad2-afe9-1217fb1720ce.png" 
-              alt="Eric Dauchy" 
-              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 object-cover"
-            />
-            <h3 className="text-xl sm:text-2xl font-bold text-trdwnd-navy mb-2">Eric Dauchy</h3>
-            <p className="text-trdwnd-gold font-semibold mb-3 sm:mb-4">Directeur Général</p>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-              Avec plus de 20 ans d'expérience dans le développement des affaires internationales, Eric a facilité plus de 100 partenariats réussis entre des entreprises canadiennes et européennes.
+            <p className="text-gray-600 mb-6 text-xl">
+              Le moment est venu de réduire la dépendance au commerce américain et de s'étendre en Europe. Construisons ensemble votre histoire de succès européen.
             </p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="https://www.linkedin.com/in/ericdauchy/"
-                className="text-trdwnd-navy hover:text-trdwnd-gold transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:Eric.dauchy@eurogrowth.ca"
-                className="text-trdwnd-navy hover:text-trdwnd-gold transition-colors"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg text-center">
-            <img 
-              src="/lovable-uploads/b6db057a-109c-4d30-8766-909c77dffe5d.png" 
-              alt="Eric Gerritsen" 
-              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 object-cover"
-            />
-            <h3 className="text-xl sm:text-2xl font-bold text-trdwnd-navy mb-2">Eric Gerritsen</h3>
-            <p className="text-trdwnd-gold font-semibold mb-3 sm:mb-4">Directeur Européen</p>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-              Basé en Europe, Eric apporte une expertise inestimable du marché européen et maintient des relations étroites avec des partenaires clés à travers l'UE.
-            </p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="mailto:Eric@imperialyellowventures.com"
-                className="text-trdwnd-navy hover:text-trdwnd-gold transition-colors"
-              >
-                <Mail size={20} />
-              </a>
+            <div className="mt-8 space-y-4">
+              <h3 className="text-2xl font-bold text-trdwnd-navy">Pourquoi nous choisir?</h3>
+              <ul className="space-y-3">
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Réseau étendu dans l'UE</h4>
+                    <p className="text-gray-600">Des décennies d'expérience et des partenariats de premier plan dans les industries européennes clés.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Support pour le commerce et l'entrée sur le marché</h4>
+                    <p className="text-gray-600">Conseils d'experts sur la conformité réglementaire, la logistique et l'intelligence de marché.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Atténuation des risques</h4>
+                    <p className="text-gray-600">Connexions sécurisées et vérifiées pour éviter les erreurs coûteuses.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">Mise en relation personnalisée</h4>
+                    <p className="text-gray-600">Présentations sur mesure aux acheteurs, fournisseurs et investisseurs européens.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </Section>
 
-      <Section 
-        title="Notre Approche" 
-        subtitle="Une méthodologie éprouvée pour créer des partenariats réussis et durables."
-        bg="white"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {[
-            {
-              step: "01",
-              title: "Découverte",
-              description: "Nous analysons en profondeur votre entreprise, vos objectifs et votre positionnement sur le marché pour identifier les meilleures opportunités européennes."
-            },
-            {
-              step: "02", 
-              title: "Connexion",
-              description: "Grâce à notre vaste réseau, nous identifions et connectons votre entreprise avec des partenaires européens alignés sur vos valeurs et objectifs."
-            },
-            {
-              step: "03",
-              title: "Facilitation",
-              description: "Nous accompagnons le processus de négociation et de partenariat pour assurer un succès mutuel et une relation durable."
-            }
-          ].map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-trdwnd-navy text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-4 sm:mb-6">
-                {item.step}
+      <Section title="Notre mission et nos valeurs" bg="light">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold text-trdwnd-navy mb-4">Notre mission</h3>
+            <p className="text-gray-600 mb-6 text-lg">
+              Permettre aux entreprises canadiennes d'entrer avec succès et de prospérer sur les marchés européens en fournissant des connexions stratégiques, des informations de marché et des opportunités de partenariat qui favorisent une croissance internationale durable.
+            </p>
+            <div className="border-l-4 border-trdwnd-gold pl-4 italic text-gray-600">
+              "Nous croyons que l'innovation canadienne mérite une scène mondiale, et nous nous engageons à faire en sorte que cela se produise grâce à des partenariats européens significatifs."
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold text-trdwnd-navy mb-4">Nos valeurs</h3>
+            <ul className="space-y-4">
+              {[
+                {
+                  title: "Excellence",
+                  description: "Nous maintenons les normes les plus élevées dans toutes nos relations d'affaires et nos partenariats."
+                },
+                {
+                  title: "Intégrité",
+                  description: "Nous opérons avec transparence et honnêteté, construisant la confiance avec nos clients et partenaires."
+                },
+                {
+                  title: "Innovation",
+                  description: "Nous embrassons les solutions créatives et les approches avant-gardistes des affaires internationales."
+                },
+                {
+                  title: "Partenariat",
+                  description: "Nous croyons en des relations mutuellement bénéfiques qui créent de la valeur à long terme pour toutes les parties."
+                }
+              ].map((value, index) => (
+                <li key={index} className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-trdwnd-navy">{value.title}</h4>
+                    <p className="text-gray-600">{value.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Notre équipe" subtitle="Rencontrez les fondateurs qui dirigent la mission d'EUROGROWTH">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-trdwnd-navy mb-2">Eric Dauchy</h3>
+              <p className="text-trdwnd-gold font-medium mb-4">Co-fondateur et PDG</p>
+              <div className="space-y-4 text-gray-600">
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Fondateur et PDG de The Constellation Group (1998) - agence de développement des affaires paneuropéenne avec des partenaires dans 27 États membres de l'UE, Royaume-Uni, Norvège, Suisse.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Responsable de diriger les programmes de développement des affaires des clients high-tech et aérospatiale/défense de TCG en Europe.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>A occupé des postes de direction dans la gestion de la chaîne d'approvisionnement, la stratégie, les ventes, la gestion de programmes, les opérations et les communications.</p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-trdwnd-navy mb-3 sm:mb-4">{item.title}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">{item.description}</p>
+              <div className="mt-6">
+                <a
+                  href="https://www.linkedin.com/in/ericdauchy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
+                >
+                  Se connecter sur LinkedIn
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </div>
             </div>
-          ))}
+            <div className="mt-auto">
+              <img 
+                src="/lovable-uploads/21e2fefa-5229-43b8-9fe9-3c76cac4a51e.png" 
+                alt="Eric Dauchy" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-trdwnd-navy mb-2">Eric Gerritsen</h3>
+              <p className="text-trdwnd-gold font-medium mb-4">Co-fondateur et COO</p>
+              <div className="space-y-4 text-gray-600">
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Supervise les opérations canadiennes, les communications, le développement des affaires et la stratégie, et les programmes d'entreprise.</p>
+                </div>
+                <div className="flex">
+                  <div className="bg-trdwnd-lightblue rounded-full h-6 w-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
+                    <div className="bg-trdwnd-navy rounded-full h-2 w-2"></div>
+                  </div>
+                  <p>Ancien SVP Global Alliances Terra Lycos, devenu VC ; co-fondateur/PDG de diverses startups nord-américaines.</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <a
+                  href="https://www.linkedin.com/in/eric-j-gerritsen-6b9117/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-trdwnd-navy hover:text-trdwnd-darkblue font-medium inline-flex items-center"
+                >
+                  Se connecter sur LinkedIn
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            </div>
+            <div className="mt-auto">
+              <img 
+                src="/lovable-uploads/00b16b7e-c499-4724-b5ba-f0d5564f8ce1.png" 
+                alt="Eric Gerritsen" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </Section>
 
-      <Section 
-        title="Nos Réussites" 
-        subtitle="Des résultats concrets qui parlent d'eux-mêmes."
-        bg="light"
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {[
-            { number: "100+", label: "Partenariats Facilités" },
-            { number: "€50M+", label: "Valeur des Accords" },
-            { number: "15", label: "Pays Européens" },
-            { number: "95%", label: "Taux de Satisfaction" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-trdwnd-navy mb-2 sm:mb-3">{stat.number}</div>
-              <div className="text-gray-600 font-medium text-sm sm:text-base">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section 
+      <Section
         bg="dark"
-        className="py-12 sm:py-16 md:py-20"
+        className="py-20 md:py-28"
       >
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Prêt à Commencer Votre Expansion Européenne?</h2>
-          <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8">
-            Contactez notre équipe dès aujourd'hui et découvrez comment nous pouvons transformer votre vision d'expansion en réalité.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button asChild size="lg" className="bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy font-medium w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
-              <Link to="/fr/commencer">Commencer Maintenant</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white bg-white/10 hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
-              <Link to="/fr/services">Nos Services</Link>
-            </Button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl font-bold text-trdwnd-gold mb-2">25+</div>
+            <p className="text-white">Années d'expérience combinée</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl font-bold text-trdwnd-gold mb-2">40+</div>
+            <p className="text-white">Partenariats UE réussis</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-4xl font-bold text-trdwnd-gold mb-2">27+</div>
+            <p className="text-white">UE + Royaume-Uni, Norvège et Suisse</p>
           </div>
         </div>
       </Section>
