@@ -17,7 +17,7 @@ const IndustriesPageFr = () => {
       <Hero
         title="Industries que Nous Servons"
         subtitle="Nous nous spécialisons dans la connexion d'entreprises canadiennes avec des partenaires européens dans des secteurs à forte valeur ajoutée et à fort potentiel de croissance."
-        image="/lovable-uploads/4045def3-70c1-4b43-b2f8-280f3b19b716.png"
+        image="/lovable-uploads/d70aa86b-313f-4528-b680-3a6b4f002042.png"
       />
 
       <Section 
