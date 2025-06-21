@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Flag } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -91,11 +91,8 @@ const Navbar = () => {
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="flex items-center gap-2">
-                <Flag className="h-4 w-4" />
-                <span className="text-lg">
-                  {languages.find(lang => lang.code === currentLanguage)?.flag}
-                </span>
+              <Button variant="outline" size="sm" className="text-xl px-2 py-1">
+                {languages.find(lang => lang.code === currentLanguage)?.flag}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="bg-white shadow-lg border">
@@ -122,10 +119,8 @@ const Navbar = () => {
           {/* Mobile Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="flex items-center gap-1 px-2">
-                <span className="text-sm">
-                  {languages.find(lang => lang.code === currentLanguage)?.flag}
-                </span>
+              <Button variant="outline" size="sm" className="text-lg px-2 py-1">
+                {languages.find(lang => lang.code === currentLanguage)?.flag}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="bg-white shadow-lg border">
