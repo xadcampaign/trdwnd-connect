@@ -100,11 +100,7 @@ const Navbar = () => {
               <Button
                 key={language.flag}
                 onClick={() => handleLanguageChange(language.path)}
-                className={`text-xl px-2 py-1 ${
-                  (language.flag === "🇨🇦" && !isFrench) || (language.flag === "🇫🇷" && isFrench)
-                    ? "bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy"
-                    : "bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
-                }`}
+                className="text-xl px-2 py-1 bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
               >
                 {language.flag}
               </Button>
@@ -126,11 +122,7 @@ const Navbar = () => {
               <Button
                 key={language.flag}
                 onClick={() => handleLanguageChange(language.path)}
-                className={`text-lg px-2 py-1 ${
-                  (language.flag === "🇨🇦" && !isFrench) || (language.flag === "🇫🇷" && isFrench)
-                    ? "bg-trdwnd-gold hover:bg-trdwnd-gold/90 text-trdwnd-navy"
-                    : "bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
-                }`}
+                className="text-lg px-2 py-1 bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white"
               >
                 {language.flag}
               </Button>
