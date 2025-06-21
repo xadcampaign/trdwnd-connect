@@ -21,7 +21,7 @@ const AboutPageFr = () => {
       <Hero
         title="Votre Passerelle vers l'Expansion Européenne"
         subtitle="EuroGrowth connecte les entreprises canadiennes ambitieuses avec des partenaires européens stratégiques, ouvrant de nouveaux horizons de croissance et d'innovation."
-        image="/lovable-uploads/1abfae25-7a35-45ef-9b8d-86b2d4b82ef1.png"
+        image="/lovable-uploads/17dad340-be33-4a0f-b331-5283eb3fc722.png"
       />
 
       <Section 
