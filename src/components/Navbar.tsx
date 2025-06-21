@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -91,7 +92,7 @@ const Navbar = () => {
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="text-xl px-2 py-1">
+              <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-xl px-2 py-1">
                 {languages.find(lang => lang.code === currentLanguage)?.flag}
               </Button>
             </DropdownMenuTrigger>
@@ -119,7 +120,7 @@ const Navbar = () => {
           {/* Mobile Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="text-lg px-2 py-1">
+              <Button className="bg-trdwnd-navy hover:bg-trdwnd-darkblue text-white text-lg px-2 py-1">
                 {languages.find(lang => lang.code === currentLanguage)?.flag}
               </Button>
             </DropdownMenuTrigger>
