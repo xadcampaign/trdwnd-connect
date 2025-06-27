@@ -32,44 +32,50 @@ import JointVenturesPageFr from "./pages/fr/JointVenturesPageFr";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          {/* English routes */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/get-started" element={<GetStartedPage />} />
-          <Route path="/eu-market-analysis" element={<EUMarketAnalysisPage />} />
-          <Route path="/distribution-deals" element={<DistributionDealsPage />} />
-          <Route path="/tech-licensing" element={<TechLicensingPage />} />
-          <Route path="/joint-ventures" element={<JointVenturesPage />} />
-          
-          {/* French routes */}
-          <Route path="/fr" element={<HomePageFr />} />
-          <Route path="/fr/a-propos" element={<AboutPageFr />} />
-          <Route path="/fr/services" element={<ServicesPageFr />} />
-          <Route path="/fr/industries" element={<IndustriesPageFr />} />
-          <Route path="/fr/commencer" element={<GetStartedPageFr />} />
-          <Route path="/fr/contact" element={<ContactPageFr />} />
-          <Route path="/fr/analyse-marche-ue" element={<EUMarketAnalysisPageFr />} />
-          <Route path="/fr/accords-distribution" element={<DistributionDealsPageFr />} />
-          <Route path="/fr/licences-technologie" element={<TechLicensingPageFr />} />
-          <Route path="/fr/coentreprises" element={<JointVenturesPageFr />} />
-          
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        <Footer />
-        <Analytics />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+console.log('App component loading...');
+
+const App = () => {
+  console.log('App component rendering...');
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            {/* English routes */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/get-started" element={<GetStartedPage />} />
+            <Route path="/eu-market-analysis" element={<EUMarketAnalysisPage />} />
+            <Route path="/distribution-deals" element={<DistributionDealsPage />} />
+            <Route path="/tech-licensing" element={<TechLicensingPage />} />
+            <Route path="/joint-ventures" element={<JointVenturesPage />} />
+            
+            {/* French routes */}
+            <Route path="/fr" element={<HomePageFr />} />
+            <Route path="/fr/a-propos" element={<AboutPageFr />} />
+            <Route path="/fr/services" element={<ServicesPageFr />} />
+            <Route path="/fr/industries" element={<IndustriesPageFr />} />
+            <Route path="/fr/commencer" element={<GetStartedPageFr />} />
+            <Route path="/fr/contact" element={<ContactPageFr />} />
+            <Route path="/fr/analyse-marche-ue" element={<EUMarketAnalysisPageFr />} />
+            <Route path="/fr/accords-distribution" element={<DistributionDealsPageFr />} />
+            <Route path="/fr/licences-technologie" element={<TechLicensingPageFr />} />
+            <Route path="/fr/coentreprises" element={<JointVenturesPageFr />} />
+            
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+          <Footer />
+          <Analytics />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
