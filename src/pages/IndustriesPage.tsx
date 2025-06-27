@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { 
@@ -33,7 +32,7 @@ const IndustriesPage = () => {
 
       <Section>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-trdwnd-navy mb-6">TRDWND LLC works with business owners, principals, and boards</h2>
+          <h2 className="text-4xl font-bold text-trdwnd-navy mb-6">EuroGrowth works with business owners, principals, and boards</h2>
           <p className="text-xl text-gray-600 mb-8">
             Delivering measurable results with proven capabilities in deal leadership, negotiation, and market intelligence.
           </p>
@@ -75,7 +74,7 @@ const IndustriesPage = () => {
 
       <Section bg="light" id="eu-accelerator">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-trdwnd-navy mb-8 text-center">TRDWND - The EU Business Accelerator for Canada</h2>
+          <h2 className="text-3xl font-bold text-trdwnd-navy mb-8 text-center">EuroGrowth - The EU Business Accelerator for Canada</h2>
           
           <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
