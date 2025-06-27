@@ -26,7 +26,7 @@ const IndustriesPage = () => {
       <Hero
         title="Industries We Serve"
         subtitle="Strategic partnerships for Canadian businesses expanding to European markets"
-        image="https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        image="/lovable-uploads/e8162130-1cc6-4d7a-b2ef-4c8533d943ec.png"
         height="lg:h-[70vh]"
       />
 
